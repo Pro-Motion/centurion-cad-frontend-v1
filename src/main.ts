@@ -1,24 +1,14 @@
-import { createApp } from "vue";
-import { createPinia } from "pinia";
-import App from "./App.vue";
-import router from "./router";
-import "modern-normalize";
-import { createHead, VueHeadMixin } from "@unhead/vue";
-import components from "./views/components/UI-kit/index";
-import Interceptors from "./api/utils/interceptor";
-import { useUserStore } from "./store";
+import './assets/main.css'
 
-//
-const head = createHead();
-//
-const pinia = createPinia();
-//
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
-const userStore = useUserStore;
-Interceptors.SETUP(userStore);
+import App from './App.vue'
+import router from './router'
 
-const app = createApp(App);
-components.forEach((comp) => {
-  app.component(comp.name, comp);
-});
-app.use(router).use(pinia).use(head).mixin(VueHeadMixin).mount("#app");
+const app = createApp(App)
+
+app.use(createPinia())
+app.use(router)
+
+app.mount('#app')

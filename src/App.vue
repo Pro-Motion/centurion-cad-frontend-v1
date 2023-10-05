@@ -1,65 +1,85 @@
-<template>
-  <theme-provider :theme="THEME"> <router-view /></theme-provider>
-</template>
-<script>
-import { ThemeProvider } from "vue3-styled-components";
-import THEME from "@/constants/app-theme/app-theme.constants";
-export default {
-  data() {
-    return { THEME };
-  },
-  components: { "theme-provider": ThemeProvider },
-};
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
-<style lang="css">
-#app {
-  font-family: "Roboto Condensed", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  font-size: 16px;
-  font-weight: 400;
-  line-height: calc(24 / 16);
-}
-body {
-  height: 100vh;
-  background: linear-gradient(316deg, #0e181e 0%, #222c32 100%);
-  color: #ffffff;
-}
-body::-webkit-scrollbar {
-  background-color: #222c32;
-}
-/* BASE TAGS RESET */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
+
+<template>
+  <header>
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+  <RouterView />
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
 }
 
-img {
+.logo {
   display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
+  margin: 0 auto 2rem;
 }
 
-ul {
-  list-style: none;
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+nav a.router-link-exact-active {
+  color: var(--color-text);
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* SHARED CLASSES*/
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - -  */
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}
 </style>
