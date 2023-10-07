@@ -2,8 +2,13 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+    screens: {},
+    colors: {
+      'dark-gradient-background': ''
+    },
+    fontFamily: {},
 
+    extend: {}
+  },
+  plugins: []
+}

@@ -1,6 +1,6 @@
 = = = = = COMPONENTS = = = = =
 
-We have two types of the components
+We have 3 types of the components
 Their names must be clear and contain at least two words in the PascalCase.
 
 - STYLED(ATOMIC) - only return UI and UI-logic
@@ -16,3 +16,5 @@ Their names must be clear and contain at least two words in the PascalCase.
 
        LOGICAL components also called "MOLECULAR".
        These components include ATOMIC components and provide some business-logic
+
+- BASE - can include STYLED and/or LOGICAL components. These are only for basic particles
