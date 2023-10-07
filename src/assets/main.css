@@ -1,4 +1,5 @@
 @import './base.css';
+@import 'modern-normalize';
 
 #app {
   max-width: 1280px;
