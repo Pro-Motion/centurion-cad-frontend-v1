@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import BaseHeader from '../components/BaseHeader.vue'
-import BaseFooter from '../components/BaseFooter.vue'
+// import BaseHeader from '../components/BaseHeader.vue'
 </script>
 
 <template>
   <div>
-    <BaseHeader />
+    <!-- <BaseHeader /> -->
     <div><RouterView /></div>
-    <BaseFooter />
+    <!-- <BaseFooter /> -->
   </div>
 </template>

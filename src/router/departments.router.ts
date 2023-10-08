@@ -34,11 +34,11 @@ export default () => ({
       path: 'fire',
       name: 'Fire',
       component: () => import('@/views/departments/FireView.vue')
-    },
-    {
-      path: 'profile',
-      name: 'Profile',
-      component: () => import('@/views/user/ProfileView.vue')
     }
+    // {
+    // path: 'profile',
+    // name: 'Profile'
+    // component: () => import('@/views/user/ProfileView.vue')
+    // }
   ]
 })

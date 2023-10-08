@@ -27,7 +27,7 @@ const router = createRouter({
       path: '/admin',
       name: 'Admin',
       redirect: 'admin/dashboard',
-      component: () => import('@/views/layout/AdminLayout.vue'),
+      component: () => import('@/layouts/AdminLayout.vue'),
       ...adminRouter()
     }
   ]
