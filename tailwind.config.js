@@ -2,8 +2,8 @@
 module.exports = {
   content: [],
   theme: {
-    screens: {},  
-      
+    screens: {},
+
     backgroundColor: {
       'dark-gradient-background': 'linear-gradient(284deg, #0E181E 0%, #222C32 122.25%))',
       'block-background': '#354249',
@@ -17,7 +17,7 @@ module.exports = {
       'base-brown-accent': '#A6876D',
       'base-grey-sub': '#7F919B',
       'base-black-accent': '#182228',
-    // STATUSES
+      // STATUSES
       'status-green': '#4AA741',
       'status-yellow': '#DCCD43',
       'status-red': '#A74141'

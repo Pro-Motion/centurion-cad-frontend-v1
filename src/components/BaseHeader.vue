@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <header></header>
+  <header>Centurion CAD</header>
 </template>
