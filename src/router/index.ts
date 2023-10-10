@@ -12,7 +12,7 @@ const router = createRouter({
       name: 'Auth',
 
       redirect: 'auth/login',
-      ...authRouter
+      ...authRouter()
     },
     //
     // BASE PRIVATE ROUTES
@@ -33,4 +33,5 @@ const router = createRouter({
   ]
 })
 
+// router.beforeEach()
 export default router

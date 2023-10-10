@@ -1,6 +1,8 @@
 <script setup lang="ts">
-// import  from ''
+import { Form, configure } from 'vee-validate'
 </script>
 <template>
-  <form></form>
+  <div>
+    <Form> <StyledInput /></Form>
+  </div>
 </template>
