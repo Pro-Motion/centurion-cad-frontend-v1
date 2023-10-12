@@ -1,6 +1,10 @@
 @import './base.css';
 @import 'modern-normalize';
 
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 #app {
   font-family: 'Roboto Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,14 +14,17 @@
   font-weight: 400;
   line-height: calc(24 / 16);
 }
+
 body {
   height: 100vh;
   background: linear-gradient(316deg, #0e181e 0%, #222c32 100%);
   color: #ffffff;
 }
+
 body::-webkit-scrollbar {
   background-color: #222c32;
 }
+
 /* BASE TAGS RESET */
 h1,
 h2,
@@ -48,4 +55,25 @@ a,
   text-decoration: underline;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
+}
+
+/* BASE COMPONENT STYLES */
+.base-list-item {
+  border-radius: 4px;
+  border: 2px solid #7F919B;
+  background-color: #354249;
+  padding: 16px;
+}
+
+.character-list-item {
+  border-radius: 4px;
+  border: 2px solid #7F919B;
+  background-color: #232E34;
+  padding: 20px;
+}
+
+.input-base-item {
+  border-radius: 4px;
+  border: 2px solid #182228;
+  background: #2B383F;
 }

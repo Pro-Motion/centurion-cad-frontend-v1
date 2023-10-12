@@ -15,7 +15,9 @@ module.exports = {
       'block-headline-backgroud': '#182228',
       'card-background': '#232E34',
       'border-grey': '#7F919B',
-      'border-red': '#A74141'
+      'border-red': '#A74141',
+      'border-olive': '#2C747E',
+      'border-black': '#182228'
     },
     colors: {
       'base-white-main': '#FFFFFF',
@@ -34,7 +36,66 @@ module.exports = {
       'icon-olive-active': '#2C747E',
       'icon-disabled': '#BDC3C7'
     },
-    fontFamily: {},
+    // BORDER RADIUS
+    borderRadius: {
+      DEFAULT: '4px'
+    },
+    // FONT STYLES
+    fontFamily: {
+      sans: ['"Roboto Condensed"', 'sans-serif']
+    },
+    fontSize: {
+      sm: [
+        '12px',
+        {
+          lineHeight: '16px',
+          fontWeight: '400'
+        }
+      ],
+      base: [
+        '16px',
+        {
+          lineHeight: '20px',
+          fontWeight: '400'
+        }
+      ],
+      lg: [
+        '16px',
+        {
+          lineHeight: '20px',
+          fontWeight: '500'
+        }
+      ],
+      xl: [
+        '20px',
+        {
+          lineHeight: '24px',
+          fontWeight: '500'
+        }
+      ],
+      h1: [
+        '24px',
+        {
+          lineHeight: '28px',
+          fontWeight: '500'
+        }
+      ],
+      'text-status': [
+        '16px',
+        {
+          lineHeight: '20px',
+          fontWeight: '700',
+          letterSpacing: '0.8px'
+        }
+      ],
+      time: [
+        '32px',
+        {
+          lineHeight: '40px',
+          fontWeight: '500'
+        }
+      ]
+    },
 
     extend: {}
   },
