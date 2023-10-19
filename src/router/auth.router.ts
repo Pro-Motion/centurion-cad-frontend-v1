@@ -1,13 +1,13 @@
 export default () => ({
   children: [
     {
-      path: 'verify/:token',
-      name: 'Verify',
+      path: 'verification/:token',
+      name: 'Verification',
       component: () => import('@/views/auth/VerificationView.vue')
     },
     {
-      path: 'activate',
-      name: 'Activate',
+      path: 'activation',
+      name: 'Activation',
       component: () => import('@/views/auth/ActivationView.vue')
     },
     { path: 'login', name: 'Login', component: () => import('@/views/auth/LoginView.vue') },
