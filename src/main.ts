@@ -12,12 +12,5 @@ const app = createApp(App)
 const store = createPinia()
 const head = createHead()
 
-components.forEach((comp) => {
-  console.log(comp)
-  app.component(comp.name, comp)
-})
-
-app.use(store)
-app.use(router)
-app.use(head)
-app.mount('#app')
+export default app
+app.use(store).use(router).use(head).mount('#app')

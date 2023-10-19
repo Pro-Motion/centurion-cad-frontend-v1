@@ -1,4 +1,7 @@
 import StyledInput from './StyledInput.vue'
 import StyledSelect from './StyledSelect.vue'
 
-export default [StyledInput, StyledSelect]
+export default [
+  { name: 'StyledInput', component: StyledInput },
+  { name: 'StyledSelect', component: StyledSelect }
+]

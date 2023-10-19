@@ -4,6 +4,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 
 const count = ref(6)
 const intervalId = ref()
+
 function countdown() {
   intervalId.value = setInterval(() => {
     count.value -= 1

@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import { Form, configure } from 'vee-validate'
+import StyledInput from '../styled-library/StyledInput.vue'
+import { useForm } from 'vee-validate'
+
+const { values, defineComponentBinds } = useForm()
+const email = defineComponentBinds('email')
 </script>
 <template>
   <div>
-    <Form> <StyledInput /></Form>
+    <StyledInput v-bind="email" />
+    value: {{ values }}
   </div>
 </template>
