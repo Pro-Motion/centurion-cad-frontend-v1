@@ -58,18 +58,19 @@ a,
 }
 
 /* BASE COMPONENT STYLES */
-.base-list-item {
+
+.base-list-item, .character-list-item {
   border-radius: 4px;
   border: 2px solid #7F919B;
-  background-color: #354249;
   padding: 16px;
 }
 
+.base-list-item {
+  background-color: #354249;
+}
+
 .character-list-item {
-  border-radius: 4px;
-  border: 2px solid #7F919B;
   background-color: #232E34;
-  padding: 20px;
 }
 
 .input-base-item {
