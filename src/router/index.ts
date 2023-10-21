@@ -29,6 +29,13 @@ const router = createRouter({
       redirect: 'admin/dashboard',
       component: () => import('@/layouts/AdminLayout.vue'),
       ...adminRouter()
+    },
+    //
+    // SYSTEM ROUTES
+    {
+      path: '/forbidden',
+      name: 'Forbidden',
+      component: () => import('@/views/ForbiddenView.vue')
     }
   ]
 })
