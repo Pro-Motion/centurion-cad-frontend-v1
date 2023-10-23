@@ -45,58 +45,26 @@ module.exports = {
       sans: ['"Roboto Condensed"', 'sans-serif']
     },
     fontSize: {
-      sm: [
-        '12px',
-        {
-          lineHeight: '16px',
-          fontWeight: '400'
-        }
-      ],
-      base: [
-        '16px',
-        {
-          lineHeight: '20px',
-          fontWeight: '400'
-        }
-      ],
-      lg: [
-        '16px',
-        {
-          lineHeight: '20px',
-          fontWeight: '500'
-        }
-      ],
-      xl: [
-        '20px',
-        {
-          lineHeight: '24px',
-          fontWeight: '500'
-        }
-      ],
-      h1: [
-        '24px',
-        {
-          lineHeight: '28px',
-          fontWeight: '500'
-        }
-      ],
-      'text-status': [
-        '16px',
-        {
-          lineHeight: '20px',
-          fontWeight: '700',
-          letterSpacing: '0.8px'
-        }
-      ],
-      time: [
-        '32px',
-        {
-          lineHeight: '40px',
-          fontWeight: '500'
-        }
-      ]
+      mainTitle: '24px',
+      title: '20px',
+      mainText: '16px',
+      descriptionText: '12px',
+      timeText: '32px'
     },
-
+    fontWeight: {
+      mainText: '400',
+      title: '500',
+      timeText: '700'
+    },
+    lineHeight: {
+      mainTitle: '1.16667',
+      title: '1.2',
+      mainText: '1.25',
+      descriptionText: '1.33333'
+    },
+    letterSpacing: {
+      statusText: '0.8px'
+    },
     extend: {}
   },
   plugins: []
