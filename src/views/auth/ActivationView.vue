@@ -1,7 +1,7 @@
 <script setup lang="ts">
-// import  from ""
+import ActivationForm from '@/components/auth/ActivationForm.vue'
 </script>
 
 <template>
-  <div></div>
+  <div><ActivationForm /></div>
 </template>

@@ -1,7 +1,9 @@
 <script setup lang="ts">
-// import  from ""
+import StyledSelect from '@/components/styled-library/StyledSelect.vue'
 </script>
 
 <template>
-  <div></div>
+  <div>
+    <StyledSelect />
+  </div>
 </template>
