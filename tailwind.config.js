@@ -115,6 +115,7 @@ module.exports = {
         'disabled-border': ''
       }
     },
+
     // ICONS
     fill: {
       'icon-white-main': '#FFFFFF',
@@ -145,10 +146,45 @@ module.exports = {
       'error-border': '#733B3B',
       'error-placeholder': ''
     },
+    // FONTS
 
-    fontFamily: {},
+    fontSize: {
+      title: ['16px', { lineHeight: '1.25' }],
+      regular: ['16px', { lineHeight: '1.25' }],
+      status: ['16px', { lineHeight: '1.25' }],
+      btn_lable: ['20px', { lineHeight: '1.2' }],
+      fields_input_text: ['16px', { lineHeight: '1.25' }],
+      fields_placeholder: ['12px', { lineHeight: '1.33' }]
+    },
+    fontWeight: {
+      thin: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      black: '900'
+    },
+    fontStyle: {
+      btn_lable_nav: 'normal'
+    },
+    letterSpacing: {
+      // tightest: '-.075em',
+      // tighter: '-.05em',
+      // tight: '-.025em',
+      // normal: '0',
+      // wide: '.025em',
+      wider: '.05em'
+    },
     screens: {},
-    extend: {}
+    extend: {
+      fontFamily: {
+        main: ['Rooboto Condensed', 'sans-serif'],
+        secondary: ['Alegreya Sans SC', 'sans-serif']
+      }
+    }
   },
   plugins: []
 }
