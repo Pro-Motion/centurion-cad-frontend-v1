@@ -81,21 +81,27 @@ a,
 }
 
 /* FONT STYLES */
+.title-text,
+.button-label-text,
+.button-navigation-text,
+.main-title-text,
+.subtitle-text,
+.logo-text,
+.time-text {
+  font-weight: 500;
+}
+
+.title-text,
+.button-label-text, 
+.button-navigation-text {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
 .main-title-text {
   font-size: 24px;
-  font-weight: 500;
   line-height: 1.16667;
   text-transform: uppercase;
-}
-
-.title-text {
-  font-size: 20px;
-  font-weight: 500;
-  line-height:  1.2;
-}
-
-.subtitle-text {
-  font-weight: 500;
 }
 
 .status-text {
@@ -105,16 +111,7 @@ a,
 }
 
 .button-label-text {
-  font-size: 20px;
-  font-weight: 500;
-  line-height:  1.2;
   text-transform: uppercase;
-}
-
-.button-navigation-text {
-  font-size: 20px;
-  font-weight: 500;
-  line-height:  1.2;
 }
 
 .description-text {
@@ -124,6 +121,15 @@ a,
 
 .time-text {
   font-size: 32px;
-  font-weight: 500;
   text-transform: uppercase;
+}
+
+.logo-text {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 30px;
+}
+
+/* BUTTON STYLES */
+.button {
+  padding: 16px 12px;
 }
