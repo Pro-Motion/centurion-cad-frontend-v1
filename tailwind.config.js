@@ -42,28 +42,29 @@ module.exports = {
     },
     // FONT STYLES
     fontFamily: {
-      sans: ['"Roboto Condensed"', 'sans-serif']
+      sans: ['"Roboto Condensed"', 'sans-serif'],
+      'logo-font': ['"Alegreya Sans SC"', 'sans-serif']
     },
     fontSize: {
-      mainTitle: '24px',
-      title: '20px',
-      mainText: '16px',
-      descriptionText: '12px',
-      timeText: '32px'
+      mainTitleFontSize: '24px',
+      titleFontSize: '20px',
+      mainTextFontSize: '16px',
+      descriptionTextFontSize: '12px',
+      timeTextFontSize: '32px'
     },
     fontWeight: {
-      mainText: '400',
-      title: '500',
-      timeText: '700'
+      mainTextFontWeight: '400',
+      titleFontWeight: '500',
+      timeTextFontWeight: '700'
     },
     lineHeight: {
-      mainTitle: '1.16667',
-      title: '1.2',
-      mainText: '1.25',
-      descriptionText: '1.33333'
+      mainTitleLineHeight: '1.16667',
+      titleLineHeight: '1.2',
+      mainTextLineHeight: '1.25',
+      descriptionTextLineHeight: '1.33333'
     },
     letterSpacing: {
-      statusText: '0.8px'
+      statusTextLetterSpacing: '0.8px'
     },
     // PADDING STYLES
     padding: {
