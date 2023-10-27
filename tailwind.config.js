@@ -17,7 +17,19 @@ module.exports = {
       'border-grey': '#7F919B',
       'border-red': '#A74141',
       'border-olive': '#2C747E',
-      'border-black': '#182228'
+      'border-black': '#182228',
+      // BUTTON COLOR
+      'color-button-main': 'var(--color-button-main)',
+      'color-button-main-hover': 'var(--color-button-main-hover)',
+      'color-button-main-active': 'var(--color-button-main-active)',
+      'color-button-main-disabled': 'var(--color-button-main-disabled)',
+      'color-button-nav': 'var(--color-button-nav)',
+      'color-button-nav-hover': 'var(--color-button-nav-hover)',
+      'color-button-nav-disabled': 'var(--color-button-nav-disabled)',
+      'color-button-secondary': 'var(--color-button-secondary)',
+      'color-button-secondary-hover': 'var(--color-button-secondary-hover)',
+      'color-button-secondary-active': 'var(--color-button-secondary-active)',
+      'color-button-secondary-disabled': 'var(--color-button-secondary-disabled)'
     },
     colors: {
       'base-white-main': '#FFFFFF',

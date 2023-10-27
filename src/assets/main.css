@@ -5,6 +5,25 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* rgba(167, 65, 65, 1) */
+
+@layer base {
+  :root {
+    --color-button-main: #2C747E;
+    --color-button-main-hover: #18606A;
+    --color-button-main-active: #182228;
+    --color-button-main-disabled: #A5B9BC;
+    --color-button-secondary: #A74141;
+    --color-button-secondary-hover: #932D2D;
+    --color-button-secondary-active: #182228;
+    --color-button-secondary-disabled: #D1A9A6;
+    --color-button-navigation: #182228;
+    --color-button-navigation-hover: #091217;
+    --color-button-navigation-active: #2C747E;
+    --color-button-navigation-disabled: #27353E;
+  }
+}
+
 #app {
   font-family: 'Roboto Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -82,8 +101,7 @@ a,
 
 /* FONT STYLES */
 .title-text,
-.button-label-text,
-.button-navigation-text,
+.button,
 .main-title-text,
 .subtitle-text,
 .logo-text,
@@ -91,9 +109,15 @@ a,
   font-weight: 500;
 }
 
+.status-text,
+.main-title-text,
+.button,
+.time-text {
+  text-transform: uppercase;
+}
+
 .title-text,
-.button-label-text, 
-.button-navigation-text {
+.button {
   font-size: 20px;
   line-height: 1.2;
 }
@@ -101,17 +125,11 @@ a,
 .main-title-text {
   font-size: 24px;
   line-height: 1.16667;
-  text-transform: uppercase;
 }
 
 .status-text {
   font-weight: 700;
   letter-spacing: 0.8px;
-  text-transform: uppercase;
-}
-
-.button-label-text {
-  text-transform: uppercase;
 }
 
 .description-text {
@@ -121,7 +139,6 @@ a,
 
 .time-text {
   font-size: 32px;
-  text-transform: uppercase;
 }
 
 .logo-text {
@@ -131,5 +148,71 @@ a,
 
 /* BUTTON STYLES */
 .button {
-  padding: 16px 12px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  align-items: center;
+}
+
+.button-main,
+.button-main-icon {
+  padding: 16px;
+  gap: 8px;
+  background-color: var(--color-button-main);
+}
+
+.button-main,
+.button-secondary {
+  justify-content: center;
+}
+
+.button-main:hover,
+.button-main-icon:hover {
+  background-color: var(--color-button-main-hover);
+}
+
+.button-main:active,
+.button-main-icon:active {
+  background-color: var(--color-button-main-active);
+}
+
+.button-main:disabled,
+.button-main-icon:disabled {
+  background-color: var(--color-button-main-disabled);
+}
+
+.button-secondary {
+  padding: 16px;
+  background-color: var(--color-button-secondary);
+}
+
+.button-secondary:hover {
+  background-color: var(--color-button-secondary-hover);
+}
+
+.button-secondary:active {
+  background-color: var(--color-button-secondary-active);
+}
+
+.button-secondary:disabled {
+  background-color: var(--color-button-secondary-disabled);
+}
+
+.button-navigation {
+  padding: 12px 16px;
+  gap: 36px;
+  background-color: var(--color-button-navigation);
+}
+
+.button-navigation:hover {
+  background-color: var(--color-button-navigation-hover);
+}
+
+.button-navigation:active {
+  background-color: var(--color-button-navigation-active);
+}
+
+.button-navigation:disabled {
+  background-color: var(--color-button-navigation-disabled);
 }
