@@ -65,7 +65,23 @@ module.exports = {
     letterSpacing: {
       statusText: '0.8px'
     },
-    extend: {}
+    // PADDING STYLES
+    padding: {
+      'department-block': '40px',
+      'title-block': '24px',
+      'main-block': '20px',
+      'info-block': '16px',
+      input: '12px',
+      '8px': '8px',
+      '9px': '9px',
+      '10px': '10px',
+      '14px': '14px',
+      '16px': '16px',
+      '20px': '20px'
+    },
+    extend: {
+      extend: {}
+    }
   },
   plugins: []
 }
