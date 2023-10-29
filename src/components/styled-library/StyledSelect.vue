@@ -22,7 +22,7 @@ const props = defineProps({
 })
 
 const searchValue = ref('')
-const current = ref({})
+const current = ref(null)
 const isOpen = ref(false)
 
 function toggleIsOpen() {
@@ -33,11 +33,11 @@ function chooseItem(item: object) {
   current.value = item
 }
 
-function filterItems(data) {
-  return data.filter((el) => {
-    el[searchValue]
-  })
-}
+// function filterItems(data) {
+//   return data.filter((el) => {
+//     el[searchValue]
+//   })
+// }
 </script>
 
 <template>
@@ -50,7 +50,7 @@ function filterItems(data) {
       <p @click="toggleIsOpen">icon</p>
     </label>
     <ul v-show="isOpen">
-      <li>g</li>
+      <li>Select</li>
       <li @click="() => chooseItem(item)" v-for="item in data" :key="item.id">
         {{ item }}
       </li>
