@@ -29,7 +29,11 @@ module.exports = {
       'color-button-secondary': 'var(--color-button-secondary)',
       'color-button-secondary-hover': 'var(--color-button-secondary-hover)',
       'color-button-secondary-active': 'var(--color-button-secondary-active)',
-      'color-button-secondary-disabled': 'var(--color-button-secondary-disabled)'
+      'color-button-secondary-disabled': 'var(--color-button-secondary-disabled)',
+      'color-button-icon': 'var(--color-button-icon)',
+      'color-button-icon-hover': 'var(--color-button-icon-hover)',
+      'color-button-icon-active': 'var(--color-button-icon-active)',
+      'color-button-icon-disabled': 'var(--color-button-icon-disabled)'
     },
     colors: {
       'base-white-main': '#FFFFFF',
@@ -54,7 +58,8 @@ module.exports = {
     },
     // FONT STYLES
     fontFamily: {
-      sans: ['"Roboto Condensed"', 'sans-serif']
+      sans: ['"Roboto Condensed"', 'sans-serif'],
+      'logo-sans': ['"Alegreya Sans SC"', 'sans-serif']
     },
     fontSize: {
       mainTitle: '24px',
