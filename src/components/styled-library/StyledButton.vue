@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
+import BaseSvg from '../base/BaseSvg.vue'
+import IconUser from '@/assets/lib/icons/32px/IconUser.vue'
 defineProps({
   disabled: { type: Boolean, default: false },
   text: { type: String, default: 'Start' },
@@ -8,7 +8,8 @@ defineProps({
 })
 </script>
 <template>
-  <button class="button button-label-text border-olive" :disabled="disabled" :type="type">
+  <button :type="type" class="button button-main border-olive" :disabled="disabled">
     {{ text }}
+    <BaseSvg iconName="cioc" width="32" height="32" iconColor="red"><IconUser /></BaseSvg>
   </button>
 </template>
