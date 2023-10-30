@@ -3,7 +3,7 @@
 .base-list-item,
 .character-list-item {
   border-radius: 4px;
-  border: 2px solid #7F919B;
+  border: 2px solid #7f919b;
   padding: 16px;
 }
 
@@ -12,13 +12,13 @@
 }
 
 .character-list-item {
-  background-color: #232E34;
+  background-color: #232e34;
 }
 
 .input-base-item {
   border-radius: 4px;
   border: 2px solid #182228;
-  background: #2B383F;
+  background-color: #2b383f;
 }
 
 /* FONT STYLES */
