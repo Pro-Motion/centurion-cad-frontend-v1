@@ -5,6 +5,29 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* rgba(167, 65, 65, 1) */
+
+@layer base {
+  :root {
+    --color-button-main: #2C747E;
+    --color-button-main-hover: #18606A;
+    --color-button-main-active: #182228;
+    --color-button-main-disabled: #A5B9BC;
+    --color-button-secondary: #A74141;
+    --color-button-secondary-hover: #932D2D;
+    --color-button-secondary-active: #182228;
+    --color-button-secondary-disabled: #D1A9A6;
+    --color-button-navigation: #182228;
+    --color-button-navigation-hover: #091217;
+    --color-button-navigation-active: #2C747E;
+    --color-button-navigation-disabled: #27353E;
+    --color-button-icon: #7F919B99;
+    --color-button-icon-hover: #61737D99;
+    --color-button-icon-active: #18222899;
+    --color-button-icon-disabled: #BDC3C766;
+  }
+}
+
 #app {
   font-family: 'Roboto Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,81 +78,4 @@ a,
   text-decoration: underline;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
-}
-
-/* BASE COMPONENT STYLES */
-
-.base-list-item,
-.character-list-item {
-  border-radius: 4px;
-  border: 2px solid #7f919b;
-  padding: 16px;
-}
-
-.base-list-item {
-  background-color: #354249;
-}
-
-.character-list-item {
-  background-color: #232e34;
-}
-
-.input-base-item {
-  border-radius: 4px;
-  border: 2px solid #182228;
-  background: #2b383f;
-}
-
-/* FONT STYLES */
-.title-text,
-.button-label-text,
-.button-navigation-text,
-.main-title-text,
-.subtitle-text,
-.logo-text,
-.time-text {
-  font-weight: 500;
-}
-
-.title-text,
-.button-label-text,
-.button-navigation-text {
-  font-size: 20px;
-  line-height: 1.2;
-}
-
-.main-title-text {
-  font-size: 24px;
-  line-height: 1.16667;
-  text-transform: uppercase;
-}
-
-.status-text {
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-}
-
-.button-label-text {
-  text-transform: uppercase;
-}
-
-.description-text {
-  font-size: 12px;
-  line-height: 1.3333;
-}
-
-.time-text {
-  font-size: 32px;
-  text-transform: uppercase;
-}
-
-.logo-text {
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 30px;
-}
-
-/* BUTTON STYLES */
-.button {
-  padding: 16px 12px;
 }
