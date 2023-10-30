@@ -1,10 +1,10 @@
-import { Super } from "./super";
+import { Super } from './super'
 
 class Civilian extends Super {
   constructor() {
-    super({ baseEndpoint: "/civilian" });
+    super({ baseEndpoint: '/civilian' })
   }
   // getAllBrands() {}
 }
 
-export { Civilian };
+export { Civilian }
