@@ -1,9 +1,9 @@
-import { Super } from "./super";
+import { Super } from './super'
 
 class Dispatch extends Super {
   constructor() {
-    super({ baseEndpoint: "/disp" });
+    super({ baseEndpoint: '/disp' })
   }
 }
 
-export { Dispatch };
+export { Dispatch }

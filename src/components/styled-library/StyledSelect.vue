@@ -51,7 +51,7 @@ function chooseItem(item: object) {
     </label>
     <ul v-show="isOpen">
       <li>Select</li>
-      <li @click="() => chooseItem(item)" v-for="item in data" :key="item.id">
+      <li class="status-green" @click="() => chooseItem(item)" v-for="item in data" :key="item.id">
         {{ item }}
       </li>
     </ul>

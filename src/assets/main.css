@@ -62,7 +62,7 @@ a,
 .base-list-item,
 .character-list-item {
   border-radius: 4px;
-  border: 2px solid #7F919B;
+  border: 2px solid #7f919b;
   padding: 16px;
 }
 
@@ -71,13 +71,13 @@ a,
 }
 
 .character-list-item {
-  background-color: #232E34;
+  background-color: #232e34;
 }
 
 .input-base-item {
   border-radius: 4px;
   border: 2px solid #182228;
-  background: #2B383F;
+  background: #2b383f;
 }
 
 /* FONT STYLES */
@@ -92,7 +92,7 @@ a,
 }
 
 .title-text,
-.button-label-text, 
+.button-label-text,
 .button-navigation-text {
   font-size: 20px;
   line-height: 1.2;
