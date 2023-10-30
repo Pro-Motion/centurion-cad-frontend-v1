@@ -8,5 +8,7 @@ defineProps({
 })
 </script>
 <template>
-  <button :disabled="disabled" :type="type">{{ text }}</button>
+  <button class="button button-label-text border-olive" :disabled="disabled" :type="type">
+    {{ text }}
+  </button>
 </template>
