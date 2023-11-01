@@ -184,7 +184,7 @@ const THEME = {
   },
 
   ANIMATIONS: {
-    HOVER_EFFECT: '300ms cubic-bezier(.89,.91,0,.65)',
+    HOVER_EFFECT: '900ms cubic-bezier(.89,.91,0,.65)',
     LAMP_EFFECT: ''
   }
 }
