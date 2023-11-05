@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;}.cls-1,.cls-2{stroke-width:0px;}.cls-2{fill:#1a1a1a;}</style></defs><g id="outlineIcons24px"><g id="more_functions"><circle class="cls-2" cx="12" cy="12" r="1.2"/><circle class="cls-2" cx="8.4" cy="12" r="1.2"/><circle class="cls-2" cx="15.6" cy="12" r="1.2"/><path class="cls-2" d="m12,2.6C6.82,2.6,2.6,6.82,2.6,12s4.22,9.4,9.4,9.4,9.4-4.22,9.4-9.4S17.18,2.6,12,2.6Zm0,16.8c-4.08,0-7.4-3.32-7.4-7.4s3.32-7.4,7.4-7.4,7.4,3.32,7.4,7.4-3.32,7.4-7.4,7.4Z"/><rect class="cls-1" width="24" height="24"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+            }
+
+            .cls-1,
+            .cls-2 {
+                stroke-width: 0px;
+            }
+
+            .cls-2 {
+                fill: #1a1a1a;
+            }
+        </style>
+    </defs>
+    <g id="outlineIcons24px">
+        <g id="more_functions">
+            <circle class="cls-2" cx="12" cy="12" r="1.2" />
+            <circle class="cls-2" cx="8.4" cy="12" r="1.2" />
+            <circle class="cls-2" cx="15.6" cy="12" r="1.2" />
+            <path class="cls-2"
+                d="m12,2.6C6.82,2.6,2.6,6.82,2.6,12s4.22,9.4,9.4,9.4,9.4-4.22,9.4-9.4S17.18,2.6,12,2.6Zm0,16.8c-4.08,0-7.4-3.32-7.4-7.4s3.32-7.4,7.4-7.4,7.4,3.32,7.4,7.4-3.32,7.4-7.4,7.4Z" />
+            <rect class="cls-1" width="24" height="24" />
+        </g>
+    </g>
+</svg>
