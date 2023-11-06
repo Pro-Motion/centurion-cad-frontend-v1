@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}.cls-1,.cls-2{stroke-width:0px;}.cls-2{fill:#1a1a1a;}</style></defs><g id="outline_icons_32px"><circle class="cls-2" cx="16.18" cy="15.42" r="1.6"/><circle class="cls-2" cx="11.38" cy="15.42" r="1.6"/><circle class="cls-2" cx="20.98" cy="15.42" r="1.6"/><path class="cls-2" d="m15.91,27.62c-6.73-.15-12.08-5.74-11.93-12.47.15-6.73,5.74-12.08,12.47-11.93s12.08,5.74,11.93,12.47-5.74,12.08-12.47,11.93Zm.5-22.39c-5.62-.12-10.3,4.35-10.42,9.97s4.35,10.3,9.97,10.42c5.62.12,10.3-4.35,10.42-9.97.12-5.62-4.35-10.3-9.97-10.42Z"/><rect class="cls-1" width="32" height="32"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+            }
+
+            .cls-1,
+            .cls-2 {
+                stroke-width: 0px;
+            }
+
+            .cls-2 {
+                fill: #1a1a1a;
+            }
+        </style>
+    </defs>
+    <g id="outline_icons_32px">
+        <circle class="cls-2" cx="16.18" cy="15.42" r="1.6" />
+        <circle class="cls-2" cx="11.38" cy="15.42" r="1.6" />
+        <circle class="cls-2" cx="20.98" cy="15.42" r="1.6" />
+        <path class="cls-2"
+            d="m15.91,27.62c-6.73-.15-12.08-5.74-11.93-12.47.15-6.73,5.74-12.08,12.47-11.93s12.08,5.74,11.93,12.47-5.74,12.08-12.47,11.93Zm.5-22.39c-5.62-.12-10.3,4.35-10.42,9.97s4.35,10.3,9.97,10.42c5.62.12,10.3-4.35,10.42-9.97.12-5.62-4.35-10.3-9.97-10.42Z" />
+        <rect class="cls-1" width="32" height="32" />
+    </g>
+</svg>

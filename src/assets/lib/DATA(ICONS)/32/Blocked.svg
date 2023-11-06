@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;}.cls-1,.cls-2{stroke-width:0px;}</style></defs><g id="outline_icons_32px"><g id="blocked_block_someone_disabled"><rect class="cls-1" width="32" height="32"/><path class="cls-2" d="m16,3.8c-6.72,0-12.2,5.48-12.2,12.2s5.48,12.2,12.2,12.2,12.2-5.47,12.2-12.2S22.73,3.8,16,3.8Zm0,22.4c-5.62,0-10.2-4.57-10.2-10.2,0-2.63,1-5.03,2.65-6.85l14.25,14.54c-1.79,1.56-4.13,2.51-6.7,2.51Zm8.07-3.97L9.93,7.81c1.7-1.27,3.8-2.01,6.07-2.01,5.63,0,10.2,4.58,10.2,10.2,0,2.35-.79,4.51-2.13,6.23Z"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+            }
+
+            .cls-1,
+            .cls-2 {
+                stroke-width: 0px;
+            }
+        </style>
+    </defs>
+    <g id="outline_icons_32px">
+        <g id="blocked_block_someone_disabled">
+            <rect class="cls-1" width="32" height="32" />
+            <path class="cls-2"
+                d="m16,3.8c-6.72,0-12.2,5.48-12.2,12.2s5.48,12.2,12.2,12.2,12.2-5.47,12.2-12.2S22.73,3.8,16,3.8Zm0,22.4c-5.62,0-10.2-4.57-10.2-10.2,0-2.63,1-5.03,2.65-6.85l14.25,14.54c-1.79,1.56-4.13,2.51-6.7,2.51Zm8.07-3.97L9.93,7.81c1.7-1.27,3.8-2.01,6.07-2.01,5.63,0,10.2,4.58,10.2,10.2,0,2.35-.79,4.51-2.13,6.23Z" />
+        </g>
+    </g>
+</svg>
