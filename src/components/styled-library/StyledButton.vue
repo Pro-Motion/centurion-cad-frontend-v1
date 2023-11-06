@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import IconAddImage from '@/assets/lib/icons/32px/IconAddImage.vue'
+import IconClose from '@/assets/lib/icons/20px/IconClose.vue'
 import BaseSvg from '../base/BaseSvg.vue'
 import { computed, useSlots } from 'vue'
 
@@ -27,20 +27,26 @@ const onlyIcon = computed(() => {
 })
 //TODO: change w-full to native styles when last will ready
 </script>
-<!-- TODO: optimize onlyIcons with componentIS -->
+
 <template>
   <button
     :type="type"
-    :class="[`button-${variant}`, { 'w-full': variant != 'close' }]"
+    :class="[`button-${variant}`]"
     class="button border-olive"
     :disabled="disabled"
     @click="clickOnButton"
   >
     <BaseSvg v-if="variant == 'close'" iconName="close" width="20" height="20" iconColor="white">
-      <!--TODO: add closeIcon -->
+      <IconClose />
     </BaseSvg>
     <!-- TODO: ask for sizes -->
-    <BaseSvg v-if="showIcon" iconName="addImage" width="32" height="32" iconColor="white">
+    <BaseSvg
+      v-if="showIcon && variant != 'close'"
+      iconName="addImage"
+      width="32"
+      height="32"
+      iconColor="white"
+    >
       <slot></slot>
     </BaseSvg>
     <div v-if="!onlyIcon">{{ text }}</div>
