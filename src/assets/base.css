@@ -76,6 +76,7 @@
   border: none;
   align-items: center;
   transition: background-color var(--base-animation);
+  width: 100%;
 }
 
 .button-main,
@@ -111,6 +112,7 @@
 }
 
 .button-close {
+  width: auto;
   padding: 4px;
   align-items: flex-start;
   background-color: var(--color-button-secondary);
