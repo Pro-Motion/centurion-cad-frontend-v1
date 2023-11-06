@@ -25,6 +25,7 @@
     --color-button-icon-hover: #61737d99;
     --color-button-icon-active: #18222899;
     --color-button-icon-disabled: #bdc3c766;
+    --base-animation: 300ms cubic-bezier(.89,.91,0,.65);
   }
 }
 
