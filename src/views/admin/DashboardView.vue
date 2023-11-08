@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import StyledSelect from '@/components/styled-library/StyledSelect.vue'
+// import StyledSelect from '@/components/styled-library/StyledSelect.vue'
 import { useHead } from '@vueuse/head'
 
 useHead({
@@ -16,6 +16,6 @@ useHead({
 
 <template>
   <div>
-    <StyledSelect />
+    <!-- <StyledSelect /> -->
   </div>
 </template>

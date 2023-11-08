@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 // import { useField } from 'vee-validate'
 import { ref } from 'vue'
 const props = defineProps({
@@ -56,4 +56,4 @@ function chooseItem(item: object) {
       </li>
     </ul>
   </div>
-</template>
+</template> -->
