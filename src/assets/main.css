@@ -9,6 +9,9 @@
 
 @layer base {
   :root {
+    --color-border-main: #7f919b;
+    --color-base-list-bg: #7f919b;
+    --color-character-list-bg: #232e34;
     --color-button-main: #2c747e;
     --color-button-main-hover: #18606a;
     --color-button-main-active: #182228;
@@ -26,6 +29,14 @@
     --color-button-icon-active: #18222899;
     --color-button-icon-disabled: #bdc3c766;
     --base-animation: 300ms cubic-bezier(.89,.91,0,.65);
+    --color-input-bg: #2B383F;
+    --color-input-bg-disabled: #354249;
+    --color-input-border: #182228;
+    --color-input-border-focused: #2C747E;
+    --color-input-border-error: #733B3B;
+    --color-input-placeholder: #7F919B;
+    --color-input-placeholder-disabled: #6B7D87;
+    --color-white: #FFF;
   }
 }
 
