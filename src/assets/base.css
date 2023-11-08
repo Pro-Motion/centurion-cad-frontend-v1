@@ -3,16 +3,16 @@
 .base-list-item,
 .character-list-item {
   border-radius: 4px;
-  border: 2px solid #7f919b;
+  border: 2px solid var(--color-border-main);
   padding: 16px;
 }
 
 .base-list-item {
-  background-color: #354249;
+  background-color: var(color-base-list-bg);
 }
 
 .character-list-item {
-  background-color: #232e34;
+  background-color: var(--color-character-list-bg);
 }
 
 /* INPUT STYLES */
@@ -22,8 +22,7 @@
   background-color: var(--color-input-bg);
   border: 2px solid var(--color-input-border);
   cursor: pointer;
-  /* color: #333; */
-
+  color: var(--color-white);
 }
 
 .input-base-item::placeholder {
@@ -31,6 +30,23 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
+}
+
+.input-base-item:focus {
+  outline: none;
+  border: 2px solid var(--color-input-border-focused);
+}
+
+.input-base-item:disabled {
+  background-color: var(--color-input-bg-disabled);
+}
+
+.input-base-item:disabled::placeholder {
+  color: var(--color-input-placeholder-disabled);
+}
+
+.input-base-item.error {
+  border: 2px solid var(--color-input-border-error);
 }
 
 /* FONT STYLES */
