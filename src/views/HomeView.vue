@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  // Can be static or computed
+  title: 'Home | Centurion CAD',
+  meta: [
+    {
+      name: `description`,
+      content: ''
+    }
+  ]
+})
 
 const departments = ref([
   { name: 'Civilian', to: '/civilian' },

@@ -1,5 +1,16 @@
 <script setup lang="ts">
-// import  from ""
+import { useHead } from '@vueuse/head'
+
+useHead({
+  // Can be static or computed
+  title: 'Archive | Centurion CAD',
+  meta: [
+    {
+      name: `description`,
+      content: ''
+    }
+  ]
+})
 </script>
 
 <template>
