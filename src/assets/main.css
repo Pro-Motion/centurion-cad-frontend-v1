@@ -26,6 +26,10 @@
     --color-button-icon-active: #18222899;
     --color-button-icon-disabled: #bdc3c766;
     --base-animation: 300ms cubic-bezier(.89,.91,0,.65);
+    --color-input-bg: #2B383F;
+    --color-input-border: #182228;
+    --color-input-placeholder: #7F919B;
+  
   }
 }
 

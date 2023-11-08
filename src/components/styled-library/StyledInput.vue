@@ -12,6 +12,13 @@ const { value, errorMessage } = useField(() => props.name)
 </script>
 
 <template>
-  <input :name="name" :type="type" :placeholder="placeholder" :value="value" v-model="value" />
+  <input
+    class="input-base-item"
+    :name="name"
+    :type="type"
+    :placeholder="placeholder"
+    :value="value"
+    v-model="value"
+  />
   <span>{{ errorMessage }}</span>
 </template>
