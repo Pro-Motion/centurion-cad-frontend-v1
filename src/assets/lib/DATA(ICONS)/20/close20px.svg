@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+            }
+
+            .cls-1,
+            .cls-2 {
+                stroke-width: 0px;
+            }
+        </style>
+    </defs>
+    <g id="outlineIcons20px">
+        <g id="close20px">
+            <path class="cls-2"
+                d="m11.39,10l4.72-4.72c.38-.38.38-1.01,0-1.39s-1.01-.38-1.39,0l-4.72,4.72L5.28,3.88c-.38-.38-1.01-.38-1.39,0s-.38,1.01,0,1.39l4.72,4.72-4.72,4.72c-.38.38-.38,1.01,0,1.39.19.19.44.29.7.29s.5-.1.7-.29l4.72-4.72,4.72,4.72c.19.19.44.29.7.29s.5-.1.7-.29c.38-.38.38-1.01,0-1.39l-4.72-4.72Z" />
+            <rect class="cls-1" width="20" height="20" />
+        </g>
+    </g>
+</svg>

@@ -1,86 +1,203 @@
-/* color palette from <https://github.com/vuejs/theme> */
-:root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+/* BASE COMPONENT STYLES */
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
-
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+.base-list-item,
+.character-list-item {
+  border-radius: 4px;
+  border: 2px solid var(--color-border-main);
+  padding: 16px;
 }
 
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
+.base-list-item {
+  background-color: var(color-base-list-bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
+.character-list-item {
+  background-color: var(--color-character-list-bg);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
+/* INPUT STYLES */
+.input-base-item {
+  padding: 12px;
+  border-radius: 4px;
+  background-color: var(--color-input-bg);
+  border: 2px solid var(--color-input-border);
+  cursor: pointer;
+  color: var(--color-white);
+  transition: background-color var(--base-animation);
+  transition: border-color var(--base-animation);
 }
 
-body {
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.input-base-item::placeholder {
+  color: var(--color-input-placeholder);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.input-base-item:focus {
+  outline: none;
+  border: 2px solid var(--color-input-border-focused);
+}
+
+.input-base-item:disabled {
+  background-color: var(--color-input-bg-disabled);
+}
+
+.input-base-item:disabled::placeholder {
+  color: var(--color-input-placeholder-disabled);
+}
+
+.input-base-item.error {
+  border: 2px solid var(--color-input-border-error);
+}
+
+/* FONT STYLES */
+.title-text,
+.button,
+.main-title-text,
+.subtitle-text,
+.logo-text,
+.time-text {
+  font-weight: 500;
+}
+
+.status-text,
+.main-title-text,
+.button,
+.time-text {
+  text-transform: uppercase;
+}
+
+.title-text,
+.button {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.main-title-text {
+  font-size: 24px;
+  line-height: 1.16667;
+}
+
+.status-text {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.description-text {
+  font-size: 12px;
+  line-height: 1.3333;
+}
+
+.time-text {
+  font-size: 32px;
+}
+
+.logo-text {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 30px;
+}
+
+/* BUTTON STYLES */
+.button {
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  align-items: center;
+  transition: background-color var(--base-animation);
+  width: 100%;
+}
+
+.button-main,
+.button-main-icon {
+  padding: 16px;
+  gap: 8px;
+  background-color: var(--color-button-main);
+}
+
+.button-main,
+.button-secondary {
+  justify-content: center;
+}
+
+.button-main:hover,
+.button-main-icon:hover {
+  background-color: var(--color-button-main-hover);
+}
+
+.button-main:active,
+.button-main-icon:active {
+  background-color: var(--color-button-main-active);
+}
+
+.button-main:disabled,
+.button-main-icon:disabled {
+  background-color: var(--color-button-main-disabled);
+}
+
+.button-secondary {
+  padding: 16px;
+  background-color: var(--color-button-secondary);
+}
+
+.button-close {
+  width: auto;
+  padding: 4px;
+  align-items: flex-start;
+  background-color: var(--color-button-secondary);
+}
+
+.button-secondary:hover,
+.button-close:hover {
+  background-color: var(--color-button-secondary-hover);
+}
+
+.button-secondary:active,
+.button-close:active {
+  background-color: var(--color-button-secondary-active);
+}
+
+.button-secondary:disabled,
+.button-close:disabled {
+  background-color: var(--color-button-secondary-disabled);
+}
+
+.button-navigation {
+  padding: 12px 16px;
+  gap: 36px;
+  background-color: var(--color-button-navigation);
+}
+
+.button-navigation:hover {
+  background-color: var(--color-button-navigation-hover);
+}
+
+.button-navigation:active {
+  background-color: var(--color-button-navigation-active);
+}
+
+.button-navigation:disabled {
+  background-color: var(--color-button-navigation-disabled);
+}
+
+.button-icon {
+  height: 48px;
+  padding: 8px 10px;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: var(--color-button-icon);
+}
+
+.button-icon:hover {
+  background-color: var(--color-button-icon-hover);
+}
+
+.button-icon:active {
+  background-color: var(--color-button-icon-active);
+}
+
+.button-icon:disabled {
+  background-color: var(--color-button-icon-disabled);
 }

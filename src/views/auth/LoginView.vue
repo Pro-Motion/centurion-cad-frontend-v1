@@ -1,0 +1,22 @@
+<script setup lang="ts">
+import LoginForm from '@/components/auth/LoginForm.vue'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  // Can be static or computed
+  title: 'Login | Centurion CAD',
+  meta: [
+    {
+      name: `description`,
+      content: ''
+    }
+  ]
+})
+</script>
+
+<template>
+  <div>
+    <p>Login</p>
+    <LoginForm />
+  </div>
+</template>

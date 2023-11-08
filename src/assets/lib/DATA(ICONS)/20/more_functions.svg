@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+            }
+
+            .cls-1,
+            .cls-2 {
+                stroke-width: 0px;
+            }
+
+            .cls-2 {
+                fill: #1a1a1a;
+            }
+        </style>
+    </defs>
+    <g id="outlineIcons20px">
+        <g id="more_functions">
+            <circle class="cls-2" cx="10" cy="10" r="1" />
+            <circle class="cls-2" cx="7" cy="9.98" r="1" />
+            <circle class="cls-2" cx="13" cy="10.02" r="1" />
+            <path class="cls-2"
+                d="m10.05,2c-4.41-.03-8.02,3.54-8.05,7.95s3.54,8.02,7.95,8.05,8.02-3.54,8.05-7.95S14.46,2.03,10.05,2Zm-.09,14c-3.31-.02-5.98-2.73-5.96-6.04s2.73-5.98,6.04-5.96,5.98,2.73,5.96,6.04-2.73,5.98-6.04,5.96Z" />
+            <rect class="cls-1" width="20" height="20" />
+        </g>
+    </g>
+</svg>
