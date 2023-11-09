@@ -13,6 +13,7 @@ import router from '@/router'
 //   FIRE = "FIRE",
 // }
 // type SubRolesStrings = "CIV" | "POLICE" | "DISPATCH" | "FIRE";
+
 interface State {
   userInfo: {
     id: string
