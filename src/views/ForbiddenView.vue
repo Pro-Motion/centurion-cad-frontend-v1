@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import router from '@/router'
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  // Can be static or computed
+  title: 'Forbidden | Centurion CAD',
+  meta: [
+    {
+      name: `description`,
+      content: ''
+    }
+  ]
+})
 
 const count = ref(6)
 const intervalId = ref()

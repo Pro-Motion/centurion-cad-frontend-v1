@@ -1,134 +1,134 @@
-import { LocalStorage } from "@/helpers/localStorage.helper";
-import axios from "axios";
+import { LocalStorage } from '@/helpers/localStorage.helper'
+import axios from 'axios'
 
 //
 export const instanceAPI = axios.create({
-  baseURL: "",
-});
+  baseURL: ''
+})
 
 //
 interface SuperClass {
-  baseEndpoint: string;
-  contentType: string;
-  POST: (params: HTTPMethodParams) => Promise<object>;
-  GET: (params: HTTPMethodParams) => Promise<object>;
-  PUT: (params: HTTPMethodParams) => Promise<object>;
-  DELETE: (params: HTTPMethodParams) => Promise<object>;
-  _fetchTo: (params: HTTPMethodParams) => Promise<object>;
+  baseEndpoint: string
+  contentType: string
+  POST: (params: HTTPMethodParams) => Promise<object>
+  GET: (params: HTTPMethodParams) => Promise<object>
+  PUT: (params: HTTPMethodParams) => Promise<object>
+  DELETE: (params: HTTPMethodParams) => Promise<object>
+  _fetchTo: (params: HTTPMethodParams) => Promise<object>
 }
 //
 interface HTTPMethodParams {
-  endpoint: string;
-  body: object;
-  query: object;
-  needFullResponse: boolean;
-  options: object;
+  endpoint: string
+  body: object
+  query: object
+  needFullResponse: boolean
+  options: object
 }
 //
 interface Constructor {
-  baseEndpoint: string;
+  baseEndpoint: string
 }
 //  - - - - - - - - - - - - - - - - - -
 class Super implements SuperClass {
   static INSTANSE = axios.create({
-    baseURL: false ? "https://orch.ldv.com.ua/api/v0" : "http://localhost:9990/api/v0",
-  });
-  baseEndpoint: string;
-  contentType: string;
+    baseURL: false ? 'https://orch.ldv.com.ua/api/v0' : 'http://localhost:9990/api/v0'
+  })
+  baseEndpoint: string
+  contentType: string
   constructor({ baseEndpoint }: Constructor) {
-    this.baseEndpoint = baseEndpoint;
-    this.contentType = "application/json";
+    this.baseEndpoint = baseEndpoint
+    this.contentType = 'application/json'
   }
 
-  public async GET({ endpoint = "", query = {}, needFullResponse = false, options = {} }) {
+  public async GET({ endpoint = '', query = {}, needFullResponse = false, options = {} }) {
     const response = await this._fetchTo({
-      method: "GET",
+      method: 'GET',
       endpoint,
       query,
       needFullResponse,
-      options,
-    });
+      options
+    })
 
-    return response;
+    return response
   }
   // - - - - - - - - - - - -
   public async POST({
-    endpoint = "",
+    endpoint = '',
     body = {},
     query = {},
     needFullResponse = false,
-    options = {},
+    options = {}
   }) {
     return this._fetchTo({
-      method: "POST",
+      method: 'POST',
       endpoint,
       body,
       needFullResponse,
       query,
-      options,
-    });
+      options
+    })
   }
   // - - - - - - - - - - - -
   public async PUT({
-    endpoint = "",
+    endpoint = '',
     body = {},
     query = {},
     needFullResponse = false,
-    options = {},
+    options = {}
   }) {
     return this._fetchTo({
-      method: "PUT",
+      method: 'PUT',
       endpoint,
       body,
       needFullResponse,
       query,
-      options,
-    });
+      options
+    })
   }
   // - - - - - - - - - - - -
   public async DELETE({
-    endpoint = "",
+    endpoint = '',
     body = {},
     query = {},
     needFullResponse = false,
-    options = {},
+    options = {}
   }) {
     return this._fetchTo({
-      method: "DELETE",
+      method: 'DELETE',
       endpoint,
       body,
       needFullResponse,
       query,
-      options,
-    });
+      options
+    })
   }
   //  - - - - - - - - - - - -
   async _fetchTo({
-    method = "GET",
-    endpoint = "",
+    method = 'GET',
+    endpoint = '',
     body = {},
     query = {},
     needFullResponse = false,
-    options = {},
+    options = {}
   }) {
-    const formationURL = `${this.baseEndpoint}${endpoint}`;
+    const formationURL = `${this.baseEndpoint}${endpoint}`
     try {
       const response = await Super.INSTANSE({
         method,
         url: formationURL,
         data: body,
-        params: query,
-      });
+        params: query
+      })
 
       // if()
       if (!needFullResponse) {
-        return response.data;
+        return response.data
       }
-      return response;
+      return response
     } catch (e: any) {
-      return Promise.reject(e);
+      return Promise.reject(e)
     }
   }
 }
 
-export { Super };
+export { Super }
