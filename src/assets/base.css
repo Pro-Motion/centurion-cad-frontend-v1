@@ -201,3 +201,12 @@
 .button-icon:disabled {
   background-color: var(--color-button-icon-disabled);
 }
+
+/* BASE CONTAINER */
+.base-container {
+  display: flex;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 16px;
+}
