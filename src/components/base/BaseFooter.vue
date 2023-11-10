@@ -6,7 +6,7 @@ import BaseContainer from './BaseContainer.vue'
 <template>
   <footer class="fixed bottom-0 w-full bg-block-background">
     <BaseContainer>
-      <p class="block mx-auto">
+      <p class="block mx-auto description-text">
         By using this website, you agree to the
         <RouterLink to="/"> Terms of Service</RouterLink> and
         <RouterLink to="/">Privacy Policy</RouterLink> © 2023
