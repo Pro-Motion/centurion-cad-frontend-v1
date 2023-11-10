@@ -16,7 +16,9 @@ function sub() {
     <StyledBox needHeader cardHeading="Emergency Call ddddddddddd">
       <template #header></template>
       <form @submit="sub">
-        <StyledButton variant="main" type="submit" text="hi" />
+        <StyledButton variant="icon" type="submit" text="hi">
+          <IconAddImage />
+        </StyledButton>
       </form>
     </StyledBox>
   </div>
