@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import ActivationForm from '@/components/auth/ActivationForm.vue'
 import { useHead } from '@vueuse/head'
 

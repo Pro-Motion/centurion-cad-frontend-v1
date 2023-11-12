@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 defineProps({
   iconName: { type: String, default: 'box' },
   width: { type: String, default: '20' },

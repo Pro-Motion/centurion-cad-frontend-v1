@@ -1,10 +1,10 @@
-<script setup lang="ts">
+<script setup>
 import BaseSvg from '../base/BaseSvg.vue'
 import IconArrowDown from '@/assets/lib/icons/20px/IconArrowDown.vue'
 defineProps({
   disabled: { type: Boolean, default: false },
   text: { type: String, default: 'Start' },
-  type: { type: String as () => 'button' | 'submit' | 'reset', default: 'button' }
+  type: { type: String, default: 'button' }
 })
 </script>
 <template>

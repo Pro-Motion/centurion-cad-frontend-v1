@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import LoginForm from '@/components/auth/LoginForm.vue'
 import { useHead } from '@vueuse/head'
 
