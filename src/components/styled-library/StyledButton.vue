@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import IconClose from '@/assets/lib/icons/20px/IconClose.vue'
 import BaseSvg from '../base/BaseSvg.vue'
 import { computed, useSlots } from 'vue'
@@ -6,9 +6,9 @@ import { computed, useSlots } from 'vue'
 const props = defineProps({
   disabled: { type: Boolean, default: false },
   text: { type: String, default: 'Start' },
-  type: { type: String as () => 'button' | 'submit' | 'reset', default: 'button' },
+  type: { type: String },
   variant: {
-    type: String as () => 'main' | 'secondary' | 'close' | 'icon',
+    type: String,
     required: true,
     default: 'main'
   },
@@ -25,7 +25,6 @@ const clickOnButton = () => {
 const onlyIcon = computed(() => {
   return props.variant === 'close' || props.variant === 'icon'
 })
-//TODO: change w-full to native styles when last will ready
 </script>
 
 <template>
