@@ -33,18 +33,18 @@ function chooseItem(item: object) {
   current.value = item
 }
 
-import debounce from "lodash.debounce";
+import debounce from 'lodash.debounce'
 
-const value = ref("");
+const value = ref('')
 
 const debouncedWatch = debounce(() => {
-  console.log('New value:', value.value);
-}, 500);
+  console.log('New value:', value.value)
+}, 500)
 
-watch(value, debouncedWatch);
+watch(value, debouncedWatch)
 
 onBeforeUnmount(() => {
-  debouncedWatch.cancel();
+  debouncedWatch.cancel()
 })
 
 // function filterItems(data) {
