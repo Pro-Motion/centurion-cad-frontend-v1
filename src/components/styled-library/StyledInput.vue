@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { useField } from 'vee-validate'
 
 const props = defineProps({

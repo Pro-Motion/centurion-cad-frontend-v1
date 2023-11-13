@@ -1,16 +1,10 @@
 export class LocalStorage {
-  public static setAuthTokens({
-    accessToken,
-    refreshToken
-  }: {
-    accessToken: string
-    refreshToken: string
-  }) {
+  static setAuthTokens({ accessToken, refreshToken }) {
     this.setItem('accessToken', accessToken, 'setuath')
     this.setItem('refreshToken', refreshToken, 'setuath')
   }
 
-  public static getItem(key: string) {
+  static getItem(key) {
     try {
       const item = localStorage.getItem(key)
       return item ? JSON.parse(item) : undefined
@@ -19,7 +13,7 @@ export class LocalStorage {
     }
   }
 
-  public static setItem(key: string, value: any, who: string): void {
+  static setItem(key, value, who) {
     try {
       const serializedData = JSON.stringify(value)
       localStorage.setItem(key, serializedData)
@@ -27,7 +21,7 @@ export class LocalStorage {
       console.error(e)
     }
   }
-  public static removeItem(key: string): void {
+  static removeItem(key) {
     try {
       localStorage.removeItem(key)
     } catch (e) {

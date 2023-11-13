@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import router from '@/router'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useHead } from '@vueuse/head'

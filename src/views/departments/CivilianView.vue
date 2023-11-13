@@ -1,5 +1,9 @@
-<script setup lang="ts">
+<script setup>
 // import  from ""
+
+function sub() {
+  alert('sub')
+}
 </script>
 
 <template>
