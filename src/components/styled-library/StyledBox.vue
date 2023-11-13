@@ -5,7 +5,8 @@ defineProps({
     Number
   },
   needHeader: {
-    type: Boolean
+    type: Boolean,
+    default: true
   }
 })
 </script>
@@ -19,7 +20,7 @@ defineProps({
         </h1>
       </header>
       <div class="p-20px">
-        <slot></slot>
+        <slot name="body"></slot>
       </div>
     </article>
   </div>
