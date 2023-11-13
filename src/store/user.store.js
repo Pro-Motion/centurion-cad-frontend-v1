@@ -2,47 +2,8 @@ import { defineStore } from 'pinia'
 import { LocalStorage } from '@/helpers/localStorage.helper'
 import router from '@/router'
 
-// interface UserCredentials extends UserData {
-//   password: string;
-//   confirmPassword: string;
-// }
-// enum SUB_ROLES {
-//   CIV = "POLICE",
-//   POLICE = "POLICE",
-//   DISPATCH = "DISPATCH",
-//   FIRE = "FIRE",
-// }
-// type SubRolesStrings = "CIV" | "POLICE" | "DISPATCH" | "FIRE";
-
-interface State {
-  userInfo: {
-    id: string
-    email: string
-    name: string
-    dateOfBirth: string
-    roles: { subRoles: [] | string[]; mainRole: string }
-    status: string
-    verified: boolean
-    mfaEnable: boolean
-  }
-  session: { accessToken: string; refreshToken: string; IS_AUTHORIZE: boolean }
-}
-
-interface ILogin {
-  id: string
-  email: string
-  name: string
-  dateOfBirth: string
-  roles: { subRoles: [] | string[]; mainRole: string }
-  accessToken: string
-  refreshToken: string
-  status: string
-  verified: boolean
-  mfaEnable: boolean
-}
-
 export const useUserStore = defineStore('user', {
-  state: (): State => ({
+  state: () => ({
     userInfo: {
       id: '',
       email: '',
@@ -61,10 +22,10 @@ export const useUserStore = defineStore('user', {
     }
   }),
   getters: {
-    getUserData(): State {
+    getUserData() {
       return { session: this.session, userInfo: this.userInfo }
     },
-    getUserAuthStatus(): [IS_AUTHORIZE: boolean] {
+    getUserAuthStatus() {
       return [this.session.IS_AUTHORIZE]
     }
   },
@@ -80,7 +41,7 @@ export const useUserStore = defineStore('user', {
       roles: { subRoles, mainRole },
       status,
       verified
-    }: ILogin) {
+    }) {
       // SESSION OPERATIONS
       this.session.IS_AUTHORIZE = true
       this.session.accessToken = accessToken
@@ -119,7 +80,7 @@ export const useUserStore = defineStore('user', {
       return
     },
 
-    REFRESH({ accessToken, refreshToken }: { accessToken: string; refreshToken: string }) {
+    REFRESH({ accessToken, refreshToken }) {
       this.session.IS_AUTHORIZE = true
       this.session.accessToken = accessToken
       this.session.refreshToken = refreshToken
@@ -142,7 +103,7 @@ export const useUserStore = defineStore('user', {
       roles: { subRoles, mainRole },
       status,
       verified
-    }: ILogin) {
+    }) {
       // SESSION OPERATIONS
       this.session.IS_AUTHORIZE = true
       this.session.accessToken = accessToken

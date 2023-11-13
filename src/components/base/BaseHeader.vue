@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import BaseContainer from '../base/BaseContainer.vue'
 import BaseSvg from '../base/BaseSvg.vue'
 import IconLogo from '@/assets/lib/icons/logo/IconLogo.vue'

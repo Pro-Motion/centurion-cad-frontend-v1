@@ -1,5 +1,5 @@
-<script setup lang="ts">
-const props = defineProps({
+<script setup>
+defineProps({
   cardHeading: {
     type: String,
     Number

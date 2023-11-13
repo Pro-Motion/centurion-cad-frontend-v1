@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import StyledInput from '../styled-library/StyledInput.vue'
 import StyledButton from '../styled-library/StyledButton.vue'
 
