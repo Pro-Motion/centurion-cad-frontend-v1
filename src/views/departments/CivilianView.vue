@@ -1,18 +1,11 @@
-<script setup>
-import StyledBox from '@/components/styled-library/StyledBox.vue'
+<script setup lang="ts">
+// import  from ""
 
-// function sub() {
-//   alert('sub')
-// }
+function sub() {
+  alert('sub')
+}
 </script>
 
 <template>
-  <div>
-    <StyledBox
-      ><template #header>hello </template>
-      <template #body>
-        <div>asf</div>
-      </template></StyledBox
-    >
-  </div>
+  <div></div>
 </template>
