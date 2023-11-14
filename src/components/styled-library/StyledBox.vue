@@ -1,8 +1,7 @@
 <script setup lang="ts">
 const props = defineProps({
   cardHeading: {
-    type: String,
-    Number
+    type: String
   },
   needHeader: {
     type: Boolean
@@ -11,8 +10,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="d bg-border-grey p-14px">
-    <article class="bg-block-background inline-block overflow-hidden rounded box">
+  <div>
+    <article class="bg-block-background inline-block overflow-hidden rounded">
       <header v-if="needHeader" class="p-[24px] bg-block-headline-backgroud main-title-text">
         <h1>
           <slot name="header">{{ cardHeading?.toUpperCase() }}</slot>
@@ -25,9 +24,4 @@ const props = defineProps({
   </div>
 </template>
 
-<style scoped>
-.header-f-z {
-  font-size: 24px;
-  line-height: 28px;
-}
-</style>
+<style scoped></style>
