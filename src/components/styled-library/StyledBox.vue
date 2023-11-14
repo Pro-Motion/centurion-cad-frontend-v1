@@ -12,8 +12,13 @@ defineProps({
 
 <template>
   <div>
-    <article class="bg-block-background inline-block overflow-hidden rounded">
-      <header v-if="needHeader" class="p-[24px] bg-block-headline-backgroud main-title-text">
+    <article
+      class="bg-block-background border border-[var(--color-border-main)] inline-block overflow-hidden rounded"
+    >
+      <header
+        v-if="needHeader"
+        class="p-[24px] border-b border-[var(--color-border-main)] bg-block-headline-backgroud"
+      >
         <h1>
           <slot name="header">{{ cardHeading?.toUpperCase() }}</slot>
         </h1>
