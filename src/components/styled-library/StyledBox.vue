@@ -1,10 +1,11 @@
-<script setup lang="ts">
-const props = defineProps({
+<script setup>
+defineProps({
   cardHeading: {
     type: String
   },
   needHeader: {
-    type: Boolean
+    type: Boolean,
+    default: true
   }
 })
 </script>
@@ -18,7 +19,7 @@ const props = defineProps({
         </h1>
       </header>
       <div class="p-20px">
-        <slot></slot>
+        <slot name="body"></slot>
       </div>
     </article>
   </div>

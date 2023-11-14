@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 // import StyledSelect from '@/components/styled-library/StyledSelect.vue'
 import { useHead } from '@vueuse/head'
 
