@@ -8,6 +8,7 @@ const props = defineProps({
   text: { type: String, default: 'Start' },
   type: { type: String },
   variant: {
+    //main close secondary icon
     type: String,
     required: true,
     default: 'main'

@@ -210,3 +210,10 @@
   margin: 0 auto;
   padding: 0px 16px;
 }
+
+/* GLOBAL NOTIFICATION */
+.global-notification {
+  width: 368px;
+  background-color: var(--color-white);
+  color: var(--text-black);
+}
