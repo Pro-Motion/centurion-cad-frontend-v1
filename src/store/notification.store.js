@@ -4,17 +4,17 @@ export const useNotificationStore = defineStore('notification', {
   state: () => ({
     isVisible: false,
     message: '',
-    type: ''
+    type: 'failed'
   }),
   actions: {
-    setMessage(msg) {
+    call(msg, type) {
+      this.isVisible = true
       this.message = msg
-    },
-    setVisibility(isVisible) {
-      this.isVisible = isVisible
-    },
-    setType(type) {
       this.type = type
+
+      setTimeout(() => {
+        this.isVisible = false
+      }, 4000)
     }
   }
 })
