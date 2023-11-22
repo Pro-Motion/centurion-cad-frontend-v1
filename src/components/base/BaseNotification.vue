@@ -25,7 +25,7 @@ const type = computed(() => {
 <template>
   <div
     :class="[type.border]"
-    class="global-notification absolute ml-auto right-0 flex items-center gap-2 border-2 m-4 p-16px"
+    class="global-notification fixed ml-auto right-0 flex items-center gap-2 opacity-90 rounded border-2 m-4 p-16px"
   >
     <BaseSvg :iconName="type.icon" width="24" height="24" :iconColor="type.color">
       <component :is="type.icon"></component>

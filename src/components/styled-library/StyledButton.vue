@@ -36,15 +36,15 @@ const onlyIcon = computed(() => {
     :disabled="disabled"
     @click="clickOnButton"
   >
-    <BaseSvg v-if="variant == 'close'" iconName="close" width="20" height="20" iconColor="white">
+    <BaseSvg v-if="variant == 'close'" iconName="closssse" width="20" height="20" iconColor="white">
       <IconClose />
     </BaseSvg>
     <!-- TODO: ask for sizes -->
     <BaseSvg
       v-if="showIcon && variant != 'close'"
       iconName="addImage"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       iconColor="white"
     >
       <slot></slot>

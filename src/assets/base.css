@@ -217,3 +217,9 @@
   background-color: var(--color-white);
   color: var(--text-black);
 }
+/* STYLED TOOLTIP */
+.styled-tooltip {
+  background-color: var(--color-white);
+  font-size: 14px;
+  color: var(--text-black);
+}
