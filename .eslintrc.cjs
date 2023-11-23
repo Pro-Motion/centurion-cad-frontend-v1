@@ -17,7 +17,8 @@ module.exports = {
       {
         endOfLine: 'auto'
       }
-    ]
+    ],
+    eqeqeq: ['error', 'always', { null: 'ignore' }]
   },
   parserOptions: {
     ecmaVersion: 'latest'

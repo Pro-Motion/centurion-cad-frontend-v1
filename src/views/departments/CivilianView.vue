@@ -1,11 +1,15 @@
 <script setup>
-// import  from ""
 
-function sub() {
-  alert('sub')
-}
+import StyledBox from '@/components/styled-library/StyledBox.vue'
+// function sub() {
+//   alert('sub')
+// }
 </script>
 
 <template>
-  <div></div>
+  <div>
+    <StyledBox cardHeading="Title"
+      ><template #body> <div>aa</div></template></StyledBox
+    >
+  </div>
 </template>

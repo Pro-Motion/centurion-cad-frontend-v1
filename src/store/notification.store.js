@@ -1,20 +1,23 @@
 import { defineStore } from 'pinia'
+import { BASE_NOTIFICATION_TYPES } from '../constants'
 
 export const useNotificationStore = defineStore('notification', {
   state: () => ({
     isVisible: false,
     message: '',
-    type: 'failed'
+    type: BASE_NOTIFICATION_TYPES.FAILED
   }),
   actions: {
-    call(msg, type) {
+    callNotification({
+      message = 'Something went wrong..',
+      type = BASE_NOTIFICATION_TYPES.FAILED
+    }) {
       this.isVisible = true
-      this.message = msg
+      this.message = message
       this.type = type
-
-      setTimeout(() => {
-        this.isVisible = false
-      }, 4000)
+    },
+    _off() {
+      this.$reset()
     }
   }
 })
