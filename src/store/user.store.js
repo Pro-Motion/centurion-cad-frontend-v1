@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { LocalStorage } from '@/helpers/localStorage.helper'
-import router from '@/router'
+// import router from '@/router'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
@@ -21,14 +21,7 @@ export const useUserStore = defineStore('user', {
       IS_AUTHORIZE: false
     }
   }),
-  getters: {
-    getUserData() {
-      return { session: this.session, userInfo: this.userInfo }
-    },
-    getUserAuthStatus() {
-      return [this.session.IS_AUTHORIZE]
-    }
-  },
+
   actions: {
     LOGIN({
       accessToken,
@@ -76,7 +69,7 @@ export const useUserStore = defineStore('user', {
       // USER OPERATIONS
       this.userInfo = this.$state.userInfo
 
-      router.push('/auth/login')
+      // router.push('/auth/login')
       return
     },
 

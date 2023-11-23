@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-import StyledTooltip from '../styled-library/StyledTooltip.vue'
-const props = defineProps({
+import StyledTooltip from '@/components/styled-library/StyledTooltip.vue'
+defineProps({
   content: {
     type: String,
     required: true

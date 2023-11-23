@@ -36,7 +36,6 @@ const onlyIcon = computed(() => {
     :disabled="disabled"
     @click="clickOnButton"
   >
-
     <BaseSvg
       v-if="variant === BASE_BUTTON_VARIANTS.CLOSE"
       iconName="close"
