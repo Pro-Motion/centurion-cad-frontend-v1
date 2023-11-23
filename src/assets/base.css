@@ -210,3 +210,17 @@
   margin: 0 auto;
   padding: 0px 16px;
 }
+
+/* GLOBAL NOTIFICATION */
+.global-notification {
+  width: 368px;
+  border-radius: 4px;
+  background-color: var(--color-white);
+  color: var(--text-black);
+}
+/* STYLED TOOLTIP */
+.styled-tooltip {
+  background-color: var(--color-white);
+  font-size: 14px;
+  color: var(--text-black);
+}

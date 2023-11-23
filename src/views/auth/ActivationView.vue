@@ -1,5 +1,7 @@
 <script setup>
 import ActivationForm from '@/components/auth/ActivationForm.vue'
+import StyledBox from '@/components/styled-library/StyledBox.vue'
+
 import { useHead } from '@vueuse/head'
 
 useHead({
@@ -15,5 +17,9 @@ useHead({
 </script>
 
 <template>
-  <div><ActivationForm /></div>
+  <div>
+    <StyledBox card-heading="Activation" needHeader="true">
+      <template #body><ActivationForm /> </template>
+    </StyledBox>
+  </div>
 </template>

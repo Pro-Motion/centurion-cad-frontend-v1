@@ -28,15 +28,16 @@
     --color-button-icon-hover: #61737d99;
     --color-button-icon-active: #18222899;
     --color-button-icon-disabled: #bdc3c766;
-    --base-animation: 300ms cubic-bezier(.89,.91,0,.65);
-    --color-input-bg: #2B383F;
+    --base-animation: 300ms cubic-bezier(0.89, 0.91, 0, 0.65);
+    --color-input-bg: #2b383f;
     --color-input-bg-disabled: #354249;
     --color-input-border: #182228;
-    --color-input-border-focused: #2C747E;
-    --color-input-border-error: #733B3B;
-    --color-input-placeholder: #7F919B;
-    --color-input-placeholder-disabled: #6B7D87;
-    --color-white: #FFF;
+    --color-input-border-focused: #2c747e;
+    --color-input-border-error: #733b3b;
+    --color-input-placeholder: #7f919b;
+    --color-input-placeholder-disabled: #6b7d87;
+    --color-white: #fff;
+    --text-black: #182228;
   }
 }
 

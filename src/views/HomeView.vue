@@ -2,7 +2,12 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useHead } from '@vueuse/head'
-
+import { useNotificationStore } from '@/store/notification.store.js'
+import StyledButton from '@/components/styled-library/StyledButton.vue'
+import StyledBox from '@/components/styled-library/StyledBox.vue'
+import TooltipProvider from '@/components/providers/TooltipProvider.vue'
+import { BASE_NOTIFICATION_TYPES } from '@/constants'
+import { BASE_BUTTON_VARIANTS } from '../constants'
 useHead({
   // Can be static or computed
   title: 'Home | Centurion CAD',
@@ -27,13 +32,27 @@ const departments = ref([
 </script>
 
 <template>
-  <div>
-    Home
-
-    <ul>
-      <li v-for="link in departments" :key="link.name">
-        <RouterLink :to="link.to">{{ link.name }}</RouterLink>
-      </li>
-    </ul>
-  </div>
+  <StyledBox card-heading="Home" need-header="true">
+    <template #header>
+      <TooltipProvider content="Close button">
+        <StyledButton
+          @click="
+            () =>
+              useNotificationStore().callNotification({
+                message: 'Notification working correctly',
+                type: BASE_NOTIFICATION_TYPES.SUCCESS
+              })
+          "
+          :variant="BASE_BUTTON_VARIANTS.CLOSE"
+        />
+      </TooltipProvider>
+    </template>
+    <template #body>
+      <ul>
+        <li v-for="link in departments" :key="link.name">
+          <RouterLink :to="link.to">{{ link.name }}</RouterLink>
+        </li>
+      </ul></template
+    >
+  </StyledBox>
 </template>

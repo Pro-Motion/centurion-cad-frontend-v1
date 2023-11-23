@@ -1,5 +1,6 @@
 <script setup>
 import LoginForm from '@/components/auth/LoginForm.vue'
+import StyledBox from '@/components/styled-library/StyledBox.vue'
 import { useHead } from '@vueuse/head'
 
 useHead({
@@ -17,6 +18,8 @@ useHead({
 <template>
   <div>
     <p>Login</p>
-    <LoginForm />
+    <StyledBox card-heading="AUTHORIZATION" needHeader="true">
+      <template #body> <LoginForm /></template
+    ></StyledBox>
   </div>
 </template>

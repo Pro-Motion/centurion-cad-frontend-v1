@@ -23,7 +23,6 @@ const onSubmit = handleSubmit((values) => {
 })
 </script>
 <template>
-  ()
   <div>
     <form @submit.prevent="onSubmit">
       <StyledInput name="fistName" type="text" placeholder="Fist name" />
