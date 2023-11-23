@@ -5,19 +5,19 @@ defineProps({
   },
   needHeader: {
     type: Boolean,
-    default: true
+    default: false
   }
 })
 </script>
 
 <template>
-  <div>
+  <div class="block">
     <article
-      class="bg-block-background border border-[var(--color-border-main)] inline-block overflow-hidden rounded"
+      class="bg-block-background border border-[var(--color-border-main)] inline-block rounded"
     >
       <header
         v-if="needHeader"
-        class="p-[24px] border-b border-[var(--color-border-main)] bg-block-headline-backgroud"
+        class="p-[24px] border-b border-[var(--color-border-main)] bg-block-headline-backgroud rounded-t"
       >
         <h1>
           <slot name="header">{{ cardHeading?.toUpperCase() }}</slot>

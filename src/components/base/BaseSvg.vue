@@ -1,6 +1,5 @@
 <script setup>
 defineProps({
-  iconName: { type: String, default: 'box' },
   width: { type: String, default: '20' },
   height: { type: String, default: '20' },
   iconColor: { type: String, default: 'currentColor' }
@@ -13,7 +12,6 @@ defineProps({
     :height="height"
     :view-box="(width, height)"
   >
-    <title :id="iconName">{{ iconName }} icon</title>
     <g :fill="iconColor"><slot /></g>
   </svg>
 </template>

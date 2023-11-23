@@ -36,6 +36,7 @@ const onlyIcon = computed(() => {
     :disabled="disabled"
     @click="clickOnButton"
   >
+
     <BaseSvg
       v-if="variant === BASE_BUTTON_VARIANTS.CLOSE"
       iconName="close"
@@ -49,8 +50,8 @@ const onlyIcon = computed(() => {
     <BaseSvg
       v-if="showIcon && variant !== BASE_BUTTON_VARIANTS.CLOSE"
       iconName="addImage"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       iconColor="white"
     >
       <slot></slot>
