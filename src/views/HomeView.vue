@@ -2,7 +2,10 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useHead } from '@vueuse/head'
-
+import { useNotificationStore } from '@/store/notification.store.js'
+import StyledButton from '@/components/styled-library/StyledButton.vue'
+import { BASE_NOTIFICATION_TYPES } from '@/constants'
+import { BASE_BUTTON_VARIANTS } from '../constants'
 useHead({
   // Can be static or computed
   title: 'Home | Centurion CAD',
@@ -29,7 +32,17 @@ const departments = ref([
 <template>
   <div>
     Home
-
+    <StyledButton
+      @click="
+        () =>
+          useNotificationStore().callNotification({
+            message: 'Hello',
+            type: BASE_NOTIFICATION_TYPES.SUCCESS
+          })
+      "
+      :variant="BASE_BUTTON_VARIANTS.CLOSE"
+    />
+    <button>asf</button>
     <ul>
       <li v-for="link in departments" :key="link.name">
         <RouterLink :to="link.to">{{ link.name }}</RouterLink>

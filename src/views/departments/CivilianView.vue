@@ -1,11 +1,14 @@
-<script setup lang="ts">
-// import  from ""
-
-function sub() {
-  alert('sub')
-}
+<script setup>
+import StyledBox from '@/components/styled-library/StyledBox.vue'
+// function sub() {
+//   alert('sub')
+// }
 </script>
 
 <template>
-  <div></div>
+  <div>
+    <StyledBox cardHeading="Title"
+      ><template #body> <div>aa</div></template></StyledBox
+    >
+  </div>
 </template>
