@@ -4,9 +4,6 @@ import BaseHeader from '../components/base/BaseHeader.vue'
 import BaseFooter from '../components/base/BaseFooter.vue'
 import BaseNotification from '../components/base/BaseNotification.vue'
 import { useNotificationStore } from '@/store/notification.store.js'
-import TooltipProvider from '../components/providers/TooltipProvider.vue'
-import StyledButton from '../components/styled-library/StyledButton.vue'
-import StyledBox from '../components/styled-library/StyledBox.vue'
 </script>
 
 <template>
@@ -15,6 +12,7 @@ import StyledBox from '../components/styled-library/StyledBox.vue'
     <Transition>
       <BaseNotification v-if="useNotificationStore().isVisible" />
     </Transition>
+
     <div><RouterView /></div>
     <BaseFooter />
   </div>

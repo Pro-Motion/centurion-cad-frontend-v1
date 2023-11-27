@@ -224,3 +224,13 @@
   font-size: 14px;
   color: var(--text-black);
 }
+/* STYLED TEXTBLOCK */
+.styled-textblock {
+}
+
+.styled-textblock-heading {
+  font-size: 20px;
+
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+}

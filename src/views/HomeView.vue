@@ -32,7 +32,7 @@ const departments = ref([
 </script>
 
 <template>
-  <StyledBox card-heading="Home" need-header="true">
+  <StyledBox card-heading="Home" need-header>
     <template #header>
       <TooltipProvider content="Close button">
         <StyledButton
