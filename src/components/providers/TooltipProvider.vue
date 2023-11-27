@@ -24,7 +24,8 @@ function hideTip() {
 <template>
   <div class="relative" @mouseenter="showTip()" @mouseleave="hideTip()">
     <slot></slot>
-    <Transition>
+
+    <Transition @mouseenter="hideTip()">
       <StyledTooltip v-if="show" :content="content" />
     </Transition>
   </div>

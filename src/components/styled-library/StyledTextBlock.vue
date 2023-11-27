@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  cardHeading: {
+  blockHeading: {
     type: String
   },
   needHeader: {
@@ -12,19 +12,17 @@ defineProps({
 
 <template>
   <div class="block">
-    <article
-      class="bg-block-background border border-[var(--color-border-main)] inline-block rounded"
-    >
+    <article class="bg-block-background inline-block rounded">
       <header
         v-if="needHeader"
-        class="p-[24px] flex gap-5 main-title-text border-b border-[var(--color-border-main)] bg-block-headline-backgroud rounded-t"
+        class="p-16px flex gap-[10px] styled-textblock-heading bg-card-background rounded mb-2"
       >
         <h1>
-          {{ cardHeading?.toUpperCase() }}
+          {{ blockHeading }}
         </h1>
         <slot name="header"></slot>
       </header>
-      <div class="p-20px flex justify-center">
+      <div class="p-16px bg-card-background rounded">
         <slot name="body"></slot>
       </div>
     </article>
