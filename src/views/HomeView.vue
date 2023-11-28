@@ -53,6 +53,6 @@ const departments = ref([
           <RouterLink :to="link.to">{{ link.name }}</RouterLink>
         </li>
       </ul></template
-    >
+    >уу
   </StyledBox>
 </template>

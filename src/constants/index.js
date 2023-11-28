@@ -14,4 +14,4 @@ const BASE_CONTENT_MARGINS = Object.freeze({
   XL: '40px'
 })
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-export { BASE_NOTIFICATION_TYPES, BASE_BUTTON_VARIANTS, BASE_CONTENT_RETREATS }
+export { BASE_NOTIFICATION_TYPES, BASE_BUTTON_VARIANTS, BASE_CONTENT_MARGINS }
