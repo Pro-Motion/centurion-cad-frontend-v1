@@ -1,7 +1,7 @@
-<!-- <script setup >
+<script setup>
 // import { useField } from 'vee-validate'
-import { ref } from 'vue'
-const props = defineProps({
+import { ref, onBeforeUnmount, watch } from 'vue'
+defineProps({
   data: {
     type: Array,
     default: () => [
@@ -29,9 +29,9 @@ function toggleIsOpen() {
   isOpen.value = !isOpen.value
 }
 
-function chooseItem(item: object) {
-  current.value = item
-}
+// function chooseItem(item) {
+//   current.value = item
+// }
 
 import debounce from 'lodash.debounce'
 
@@ -70,4 +70,4 @@ onBeforeUnmount(() => {
       </li>
     </ul>
   </div>
-</template> -->
+</template>
