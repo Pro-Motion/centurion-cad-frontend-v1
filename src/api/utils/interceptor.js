@@ -1,30 +1,29 @@
-import type { AxiosError, AxiosResponse } from 'axios'
 import { Super } from '../super'
 import { LocalStorage } from '@/helpers/localStorage.helper'
 
 class Interceptors extends Super {
-  public static SETUP(store: any) {
+  static SETUP(store) {
     this.INSTANSE.interceptors.request.use(this.requestFulfilled, this.requestRejected)
-    this.INSTANSE.interceptors.response.use(this.responseFulfilled, (err: any) =>
+    this.INSTANSE.interceptors.response.use(this.responseFulfilled, (err) =>
       this.responseRejected(err, store)
     )
   }
   // REQUEST
-  private static requestFulfilled(config: any) {
+  static requestFulfilled(config) {
     const token = LocalStorage.getItem('accessToken')
     if (token) {
       config.headers.Authorization = 'Bearer ' + token // for Spring Boot back-end
     }
     return config
   }
-  private static requestRejected(err: AxiosError) {
+  static requestRejected(err) {
     return Promise.reject(err)
   }
   // RESPONSE
-  private static responseFulfilled(res: AxiosResponse) {
+  static responseFulfilled(res) {
     return res
   }
-  private static async responseRejected(err: any, store: any) {
+  static async responseRejected(err, store) {
     const originalConfig = err.config
 
     if (originalConfig?.url !== '/auth/login' && err.response) {

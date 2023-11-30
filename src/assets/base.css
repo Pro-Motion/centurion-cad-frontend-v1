@@ -72,16 +72,19 @@
 .button {
   font-size: 20px;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .main-title-text {
   font-size: 24px;
   line-height: 1.16667;
+  text-transform: uppercase;
 }
 
 .status-text {
   font-weight: 700;
   letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 
 .description-text {
@@ -231,4 +234,8 @@
 
   font-weight: 500;
   line-height: 24px; /* 120% */
+}
+/* HEADER ELEMENT */
+
+.styled-header-element-indicator {
 }

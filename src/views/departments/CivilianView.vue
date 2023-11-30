@@ -3,7 +3,7 @@ import StyledBox from '@/components/styled-library/StyledBox.vue'
 import StyledTextBlock from '@/components/styled-library/StyledTextBlock.vue'
 import BaseSvg from '@/components/base/BaseSvg.vue'
 import IconEdit from '@/assets/lib/icons/24px/IconEdit.vue'
-import StyledMargin from '@/components/styled-library/StyledMargin.vue'
+import StyledIndents from '@/components/styled-library/StyledIndents.vue'
 import { BASE_CONTENT_INDENTS } from '@/constants'
 
 // function sub() {
@@ -13,7 +13,7 @@ import { BASE_CONTENT_INDENTS } from '@/constants'
 
 <template>
   <div>
-    <StyledMargin :marginY="BASE_CONTENT_INDENTS.SM" :marginX="BASE_CONTENT_INDENTS.XL">
+    <StyledIndents :marginY="BASE_CONTENT_INDENTS.SM" :marginX="BASE_CONTENT_INDENTS.XL">
       <StyledBox needHeader cardHeading="Title">
         <template #body>
           <StyledTextBlock needHeader blockHeading="Some Title">
@@ -35,7 +35,7 @@ import { BASE_CONTENT_INDENTS } from '@/constants'
             </template>
           </StyledTextBlock>
         </template></StyledBox
-      ></StyledMargin
+      ></StyledIndents
     >
   </div>
 </template>

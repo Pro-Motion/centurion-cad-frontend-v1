@@ -18,7 +18,7 @@ useHead({
     }
   ]
 })
-
+const notificationStore = useNotificationStore()
 const departments = ref([
   { name: 'Civilian', to: '/civilian' },
   { name: 'Police', to: '/police' },
@@ -38,7 +38,7 @@ const departments = ref([
         <StyledButton
           @click="
             () =>
-              useNotificationStore().callNotification({
+              notificationStore.callNotification({
                 message: 'Notification working correctly',
                 type: BASE_NOTIFICATION_TYPES.SUCCESS
               })
@@ -53,6 +53,6 @@ const departments = ref([
           <RouterLink :to="link.to">{{ link.name }}</RouterLink>
         </li>
       </ul></template
-    >уу
+    >
   </StyledBox>
 </template>
