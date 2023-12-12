@@ -17,7 +17,7 @@ defineProps({
     >
       <header
         v-if="needHeader"
-        class="p-[24px] flex gap-5 main-title-text border-b border-[var(--color-border-main)] bg-block-headline-backgroud rounded-t"
+        class="p-[24px] flex gap-5 main-title-text border-b border-[var(--color-border-main)] bg-block-headline-background rounded-t"
       >
         <h1>
           {{ cardHeading?.toUpperCase() }}
