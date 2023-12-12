@@ -34,7 +34,7 @@ const departments = ref([
 <template>
   <StyledBox card-heading="Home" need-header>
     <template #header>
-      <TooltipProvider content="Close button">
+      <TooltipProvider content="Close">
         <StyledButton
           @click="
             () =>

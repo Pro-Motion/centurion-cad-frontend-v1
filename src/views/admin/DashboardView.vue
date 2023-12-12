@@ -1,7 +1,6 @@
 <script setup>
-// import StyledSelect from '@/components/styled-library/StyledSelect.vue'
+import StyledSelect from 'src/components/styled-library/StyledSelect.vue'
 import { useHead } from '@vueuse/head'
-
 useHead({
   // Can be static or computed
   title: 'Dashboard | Centurion CAD',
@@ -12,10 +11,12 @@ useHead({
     }
   ]
 })
+
+StyledSelect
 </script>
 
 <template>
   <div>
-    <!-- <StyledSelect /> -->
+    <StyledSelect search-by="name" />
   </div>
 </template>

@@ -51,6 +51,31 @@
   border: 2px solid var(--color-input-border-error);
 }
 
+/* DROPDOWN SELECT STYLES */
+.select-base-item-list {
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+  overflow-y: auto;
+  display: flex;
+  max-width: 190px;
+  max-height: 200px;
+  padding: 12px;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  border-radius: 0 0 4px 4px;
+  border: 2px solid var(--color-input-border);
+  border-top: none;
+  background-color: var(--color-input-bg);
+}
+.select-base-item {
+  color: inherit;
+}
+/*===HEADER MENU STYLES===*/
+/* .input-base-item,.select-menu-base-item {
+   background-color: var(--color-button-navigation); 
+} */
 /* FONT STYLES */
 .title-text,
 .button,
@@ -238,4 +263,12 @@
 /* HEADER ELEMENT */
 
 .styled-header-element-indicator {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-input-bg);
 }
+
+/* .styled-header-element-indicator-light {
+  background-color: ;
+} */
+/* rgba(167, 65, 65, 0.3) */

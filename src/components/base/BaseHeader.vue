@@ -1,15 +1,16 @@
 <script setup>
-import StyledHeaderElement from '@/components/styled-library/StyledHeaderElement.vue'
-
+import BaseHeaderElement from '@/components/base/BaseHeaderElement.vue'
+import TooltipProvider from '@/components/providers/TooltipProvider.vue'
 import StyledIndents from '@/components/styled-library/StyledIndents.vue'
 import BaseSvg from '../base/BaseSvg.vue'
 import IconLogo from '@/assets/lib/icons/logo/IconLogo.vue'
 import { BASE_CONTENT_INDENTS } from '../../constants'
-const components = [
-  { text: 'Dispatch', needIndicator: true },
-  { text: 'Priority', needIndicator: true },
-  { text: 'Officers', needIndicator: true }
-]
+import { reactive } from 'vue'
+const components = reactive([
+  { text: 'Dispatch', tooltipMessage: 'Dispatch availability', needIndicator: true },
+  { text: 'Priority', tooltipMessage: 'Priority status', needIndicator: true },
+  { text: 'Officers', tooltipMessage: 'Officers availability ', needIndicator: true }
+])
 </script>
 
 <template>
@@ -25,7 +26,9 @@ const components = [
       </div>
       <ul class="flex gap-[24px]">
         <li class="flex" v-for="component in components" :key="component.text">
-          <StyledHeaderElement :text="component.text" :need-indicator="component.needIndicator" />
+          <TooltipProvider class="flex" :content="component.tooltipMessage">
+            <BaseHeaderElement :text="component.text" :need-indicator="component.needIndicator" />
+          </TooltipProvider>
         </li>
       </ul>
     </StyledIndents>
