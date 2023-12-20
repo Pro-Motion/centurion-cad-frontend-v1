@@ -14,7 +14,7 @@ module.exports = {
     backgroundColor: {
       'dark-gradient-background': 'linear-gradient(284deg, #0E181E 0%, #222C32 122.25%))',
       'block-background': '#354249',
-      'block-headline-backgroud': '#182228',
+      'block-headline-background': '#182228',
       'card-background': '#232E34',
       'border-grey': '#7F919B',
       'border-red': '#A74141',

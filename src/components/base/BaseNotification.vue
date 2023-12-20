@@ -6,17 +6,17 @@ import { useNotificationStore } from '@/store/notification.store.js'
 import { computed, onUnmounted, ref } from 'vue'
 import { BASE_NOTIFICATION_TYPES } from '../../constants'
 
-const notification = useNotificationStore()
+const notificationStore = useNotificationStore()
 const timeoutId = ref(null)
 
 const type = computed(() => {
-  if (useNotificationStore().type === BASE_NOTIFICATION_TYPES.SUCCESS) {
+  if (notificationStore.type === BASE_NOTIFICATION_TYPES.SUCCESS) {
     return {
       icon: IconStatusOk,
       border: 'border-status-green',
       color: 'green'
     }
-  } else if (useNotificationStore().type === BASE_NOTIFICATION_TYPES.FAILED) {
+  } else if (notificationStore.type === BASE_NOTIFICATION_TYPES.FAILED) {
     return {
       icon: IconStatusIssue,
       border: 'border-status-red',
@@ -27,7 +27,7 @@ const type = computed(() => {
 })
 
 timeoutId.value = setTimeout(() => {
-  notification._off()
+  notificationStore._off()
 }, 5000)
 
 onUnmounted(() => (timeoutId.value = null))
@@ -41,7 +41,7 @@ onUnmounted(() => (timeoutId.value = null))
     <BaseSvg :iconName="type.icon" width="24" height="24" :iconColor="type.color">
       <component :is="type.icon"></component>
     </BaseSvg>
-    <h3>{{ notification.message }}</h3>
+    <h3>{{ notificationStore.message }}</h3>
   </div>
 </template>
 

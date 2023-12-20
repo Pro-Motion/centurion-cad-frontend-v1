@@ -23,7 +23,7 @@ class Auth extends Super {
         if (status === 401 && !originalRequest._retry) {
           console.log('i retry')
           originalRequest._retry = true
-          await refreshAccessToken()
+          await this.refreshAccessToken()
           return instanceAPI(originalRequest)
         }
         return Promise.reject(error)
