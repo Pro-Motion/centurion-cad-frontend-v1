@@ -1,17 +1,17 @@
 class Authorization {
-  provateRoutes: string[]
-  restrictedRoutes: string[]
+  provateRoutes
+  restrictedRoutes
   constructor({ privateRoutes = ['Home'], restrictedRoutes = ['Login'] }) {
     this.provateRoutes = privateRoutes
     this.restrictedRoutes = restrictedRoutes
   }
-  public isOnPrivateRoute(currentLocation: string): boolean {
+  isOnPrivateRoute(currentLocation) {
     return false
   }
-  public isOnRestrictedRoute(currentLocation: string): boolean {
+  isOnRestrictedRoute(currentLocation) {
     return false
   }
-  public async checkCurrentUser(): Promise<{ user: string }> {
+  async checkCurrentUser() {
     return { user: '' }
   }
 }

@@ -3,13 +3,14 @@ import axios from 'axios'
 
 //
 export const instanceAPI = axios.create({
-  baseURL: ''
+  baseURL: '',
+  withCredentials: true
 })
 
 //  - - - - - - - - - - - - - - - - - -
 class Super {
   static INSTANSE = axios.create({
-    baseURL: false ? 'https://orch.ldv.com.ua/api/v0' : 'http://localhost:9990/api/v0'
+    baseURL: true ? 'https://orch.ldv.com.ua/api/v0' : 'http://localhost:9990/api/v0'
   })
 
   constructor({ baseEndpoint }) {

@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createHead } from '@vueuse/head'
-
+import { authApi } from '@/api/auth.api.js'
+authApi.refreshInterceptor()
 import App from './App.vue'
 import './assets/main.css'
 
