@@ -5,7 +5,7 @@ class Admin extends Super {
     super({ baseEndpoint: '/admin' })
   }
 
-  public async createUser(userData: { email: string; subRoles: [string]; mainRole: string }) {
+  async createUser(userData) {
     return this.POST({ endpoint: '/user', body: userData })
   }
 }
