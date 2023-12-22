@@ -1,6 +1,6 @@
 <script setup>
 import StyledSelect from '@/components/styled-library/StyledSelect.vue'
-import { useHead } from '@vueuse/head'
+import { useHead } from '@unhead/vue'
 useHead({
   // Can be static or computed
   title: 'Dashboard | Centurion CAD',
