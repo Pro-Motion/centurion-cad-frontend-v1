@@ -27,7 +27,11 @@ class Auth extends Super {
         if (status === 401 && !originalRequest._retry) {
           originalRequest._retry = true
           await this.refreshAccessToken()
+<<<<<<< HEAD
           return Super.INSTANCE(originalRequest)
+=======
+          return instanceAPI(originalRequest)
+>>>>>>> 9a75a302b12b3f6d74142f0ff0eb1de11486a414
         }
         return Promise.reject(error)
       }

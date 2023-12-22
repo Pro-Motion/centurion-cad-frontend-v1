@@ -3,19 +3,13 @@ import LoginForm from '@/components/auth/LoginForm.vue'
 import StyledBox from '@/components/styled-library/StyledBox.vue'
 import { useHead } from '@vueuse/head'
 import { authApi } from '@/api/auth.api.js'
-// import { useMutation } from 'vue-query'
+import { useMutation } from 'vue-query'
 import { useAuthStore } from '@/store/auth.store.js'
 const authStore = useAuthStore()
 
-function foo(values) {
-  console.log(values)
+async function getData() {
+  const res = authApi.login(values)
 }
-
-// const user = authStore.authUser
-// async function getData() {
-//   const res = authApi.current()
-// }
-// getData()
 
 useHead({
   // Can be static or computed
@@ -33,7 +27,7 @@ useHead({
   <div>
     <p>Login</p>
     <StyledBox card-heading="AUTHORIZATION" needHeader="true">
-      <template #body> <LoginForm @values="foo" /></template
+      <template #body> <LoginForm @values="getData" /></template
     ></StyledBox>
   </div>
 </template>

@@ -57,8 +57,18 @@ body {
   color: #ffffff;
 }
 
-body::-webkit-scrollbar {
-  background-color: #222c32;
+*::-webkit-scrollbar {
+  width: 16px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 2px;
+
+  background-color: #182228;
+}
+*::-webkit-scrollbar-thumb {
+  border: 2px solid #182228;
+  border-radius: 4px;
+  background-color: #7f919b;
 }
 
 /* BASE TAGS RESET */

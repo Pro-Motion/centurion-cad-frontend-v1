@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createHead } from '@vueuse/head'
 import { authApi } from '@/api/auth.api.js'
-authApi.refreshInterceptor()
 import App from './App.vue'
 import './assets/main.css'
 
@@ -14,3 +13,5 @@ const head = createHead()
 
 export default app
 app.use(store).use(router).use(head).mount('#app')
+
+authApi.refreshInterceptor()

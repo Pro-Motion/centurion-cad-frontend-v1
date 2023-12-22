@@ -15,8 +15,19 @@ const BASE_CONTENT_INDENTS = Object.freeze({
   XL: '24px',
   XXL: ''
 })
+const BASE_INDICATOR_STATUS_COLORS = Object.freeze({
+  BLACK: ' BLACK',
+  GREEN: ' GREEN',
+  YELLOW: 'YELLOW',
+  RED: '   RED'
+})
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-export { BASE_NOTIFICATION_TYPES, BASE_BUTTON_VARIANTS, BASE_CONTENT_INDENTS }
+export {
+  BASE_NOTIFICATION_TYPES,
+  BASE_INDICATOR_STATUS_COLORS,
+  BASE_BUTTON_VARIANTS,
+  BASE_CONTENT_INDENTS
+}
 /**
  * 8px 16px 20px 24px 40px
  *

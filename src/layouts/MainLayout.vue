@@ -1,21 +1,24 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import BaseHeader from '../components/base/BaseHeader.vue'
-import BaseFooter from '../components/base/BaseFooter.vue'
-import BaseNotification from '../components/base/BaseNotification.vue'
+import BaseHeader from '@/components/base/BaseHeader.vue'
+import StyledIndents from '@/components/styled-library/StyledIndents.vue'
+import BaseFooter from '@/components/base/BaseFooter.vue'
+import BaseNotification from '@/components/base/BaseNotification.vue'
 import { useNotificationStore } from '@/store/notification.store.js'
+import { BASE_CONTENT_INDENTS } from '../constants'
+const notificationStore = useNotificationStore()
 </script>
 
 <template>
-  <div>
-    <BaseHeader />
-    <Transition>
-      <BaseNotification v-if="useNotificationStore().isVisible" />
-    </Transition>
+  <BaseHeader />
+  <Transition>
+    <BaseNotification v-if="notificationStore.isVisible" />
+  </Transition>
 
-    <div><RouterView /></div>
-    <BaseFooter />
-  </div>
+  <main>
+    <StyledIndents :padding="BASE_CONTENT_INDENTS.MD"><RouterView /></StyledIndents>
+  </main>
+  <BaseFooter />
 </template>
 
 <style scoped>
