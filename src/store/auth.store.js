@@ -1,14 +1,14 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
 
-export const useAuthStore = defineStore('authStore', () => {
-  //ask how to place userInfo schema
-  const userInfo = ref({
-    accessToken: '',
-    refreshToken: '',
-    name: '',
-    id
-  })
-
-  return {}
+export const useAuthStore = defineStore({
+  id: 'authStore',
+  state: () => ({
+    authUser: null
+  }),
+  getters: {},
+  actions: {
+    setAuthUser(user) {
+      this.authUser = user
+    }
+  }
 })
