@@ -1,18 +1,21 @@
 // 'use client';
-import { instanceAPI, Super } from './super'
+import { Super } from './super'
 
 class Auth extends Super {
   constructor({ baseEndpoint }) {
     super({ baseEndpoint })
   }
 
-  async refreshAccessToken() {
-    const response = await this.GET({ endpoint: `/auth/refresh` })
+  async refreshAccessToken(refreshToken) {
+    const response = await this.GET({
+      endpoint: `/refresh`,
+      body: { refreshToken }
+    })
     return response.data
   }
 
   refreshInterceptor() {
-    instanceAPI.interceptors.response.use(
+    Super.INSTANCE.interceptors.response.use(
       (response) => {
         return response
       },
@@ -20,11 +23,11 @@ class Auth extends Super {
       async (error) => {
         const originalRequest = error.config
         const status = error.response.data.code
+
         if (status === 401 && !originalRequest._retry) {
-          console.log('i retry')
           originalRequest._retry = true
-          await refreshAccessToken()
-          return instanceAPI(originalRequest)
+          await this.refreshAccessToken()
+          return Super.INSTANCE(originalRequest)
         }
         return Promise.reject(error)
       }
@@ -41,7 +44,8 @@ class Auth extends Super {
     return this.POST({ endpoint: '/activate', body: credentials })
   }
   async current() {
-    return this.GET({ endpoint: `/current?id=2` })
+    return this.GET({ endpoint: `/current` })
+    //add queryparams
   }
   //  async refresh(refreshToken: string) {
   //   const tokens = await this.POST({ endpoint: "/refresh", body: { refreshToken } });

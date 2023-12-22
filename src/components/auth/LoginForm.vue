@@ -10,9 +10,9 @@ const { values, handleSubmit } = useForm({
     password: yup.string().required()
   })
 })
-
+const emit = defineEmits(['values'])
 const onSubmit = handleSubmit((values) => {
-  console.log(values)
+  emit('values', values)
 })
 </script>
 <template>
