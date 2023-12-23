@@ -3,18 +3,45 @@ import LoginForm from '@/components/auth/LoginForm.vue'
 import StyledBox from '@/components/styled-library/StyledBox.vue'
 import { useHead } from '@vueuse/head'
 import { authApi } from '@/api/auth.api.js'
-// import { useMutation, useQuery } from 'vue-query'
+import { useMutation, useQuery, useQueryClient } from 'vue-query'
 import { useAuthStore } from '@/store/auth.store.js'
+const authResult = useQuery('authUser', () => authApi.current(), {
+  enabled: false,
+  retry: 1
+})
+const queryClient = useQueryClient()
+const authStore = useAuthStore()
+const { isLoading, mutate } = useMutation((credentials) => authApi.login(credentials), {
+  onError: (error) => {
+    if (Array.isArray(error.response.data.error)) {
+      error.response.data.error.forEach((el) => {
+        console.log(el.message)
+      })
+    } else {
+      console.log(error.response.data.message)
+    }
+  },
+  onSuccess: (data) => {
+    queryClient.refetchQueries('authUser')
+    createToast('Successfully logged in', {
+      position: 'top-right'
+    })
+    router.push({ name: 'profile' })
+  }
+})
 
-async function getData(values) {
-  try {
-    const res = authApi.login(values)
-    user = res
-    console.log(user)
-    console.log('sd')
-  } catch (error) {}
+function getData(values) {
+  mutate({
+    email: values.email,
+    password: values.password
+  })
 }
-
+onBeforeUpdate(() => {
+  if (authResult.isSuccess.value) {
+    const authUser = Object.assign({}, authResult.data.value?.data.user)
+    authStore.setAuthUser(authUser)
+  }
+})
 useHead({
   // Can be static or computed
   title: 'Login | Centurion CAD',
@@ -30,6 +57,7 @@ useHead({
 <template>
   <div>
     <p>Login</p>
+    <pre v-if="isLoading">loading</pre>
     <StyledBox card-heading="AUTHORIZATION" needHeader="true">
       <template #body> <LoginForm @values="getData" /></template
     ></StyledBox>
