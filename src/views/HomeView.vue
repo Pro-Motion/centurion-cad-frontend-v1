@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import { useHead } from '@vueuse/head'
+import { useHead } from '@unhead/vue'
 import { useNotificationStore } from '@/store/notification.store.js'
 import StyledButton from '@/components/styled-library/StyledButton.vue'
 import StyledBox from '@/components/styled-library/StyledBox.vue'

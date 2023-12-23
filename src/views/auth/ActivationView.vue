@@ -2,7 +2,7 @@
 import ActivationForm from '@/components/auth/ActivationForm.vue'
 import StyledBox from '@/components/styled-library/StyledBox.vue'
 
-import { useHead } from '@vueuse/head'
+import { useHead } from '@unhead/vue'
 
 useHead({
   // Can be static or computed

@@ -1,7 +1,8 @@
 <script setup>
 import router from '@/router'
 import { onMounted, onUnmounted, ref } from 'vue'
-import { useHead } from '@vueuse/head'
+import { useHead } from '@unhead/vue'
+import {} from ''
 
 useHead({
   // Can be static or computed
