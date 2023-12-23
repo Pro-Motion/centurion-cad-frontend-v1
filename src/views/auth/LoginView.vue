@@ -3,12 +3,16 @@ import LoginForm from '@/components/auth/LoginForm.vue'
 import StyledBox from '@/components/styled-library/StyledBox.vue'
 import { useHead } from '@vueuse/head'
 import { authApi } from '@/api/auth.api.js'
-import { useMutation } from 'vue-query'
+// import { useMutation, useQuery } from 'vue-query'
 import { useAuthStore } from '@/store/auth.store.js'
-const authStore = useAuthStore()
 
-async function getData() {
-  const res = authApi.login(values)
+async function getData(values) {
+  try {
+    const res = authApi.login(values)
+    user = res
+    console.log(user)
+    console.log('sd')
+  } catch (error) {}
 }
 
 useHead({
@@ -31,3 +35,5 @@ useHead({
     ></StyledBox>
   </div>
 </template>
+<!-- test12@email.com
+12345678aA -->
