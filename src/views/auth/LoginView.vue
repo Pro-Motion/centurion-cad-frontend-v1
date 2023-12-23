@@ -1,10 +1,11 @@
 <script setup>
 import LoginForm from '@/components/auth/LoginForm.vue'
 import StyledBox from '@/components/styled-library/StyledBox.vue'
-import { useHead } from '@vueuse/head'
+// import { useHead } from '@vueuse/head'
 import { authApi } from '@/api/auth.api.js'
 import { useMutation, useQuery, useQueryClient } from 'vue-query'
 import { useAuthStore } from '@/store/auth.store.js'
+import { onBeforeUpdate } from 'vue'
 const authResult = useQuery('authUser', () => authApi.current(), {
   enabled: false,
   retry: 1
@@ -23,10 +24,11 @@ const { isLoading, mutate } = useMutation((credentials) => authApi.login(credent
   },
   onSuccess: (data) => {
     queryClient.refetchQueries('authUser')
-    createToast('Successfully logged in', {
-      position: 'top-right'
-    })
-    router.push({ name: 'profile' })
+    console.log('succesful')
+    const { name, accessToken } = JSON.stringify(data)
+    console.log('User:', name)
+    console.log('Token:', accessToken)
+    // router.push({ name: 'profile' })
   }
 })
 
@@ -42,16 +44,16 @@ onBeforeUpdate(() => {
     authStore.setAuthUser(authUser)
   }
 })
-useHead({
-  // Can be static or computed
-  title: 'Login | Centurion CAD',
-  meta: [
-    {
-      name: `description`,
-      content: ''
-    }
-  ]
-})
+// useHead({
+//   // Can be static or computed
+//   title: 'Login | Centurion CAD',
+//   meta: [
+//     {
+//       name: `description`,
+//       content: ''
+//     }
+//   ]
+// })
 </script>
 
 <template>
