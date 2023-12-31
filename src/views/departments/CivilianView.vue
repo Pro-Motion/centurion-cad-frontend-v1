@@ -6,9 +6,28 @@ import IconEdit from '@/assets/lib/icons/24px/IconEdit.vue'
 import StyledIndents from '@/components/styled-library/StyledIndents.vue'
 import { BASE_CONTENT_INDENTS } from '@/constants'
 
+import { io } from 'socket.io-client'
+
 // function sub() {
 //   alert('sub')
 // }
+
+const socket = io('http://localhost:9090', { auth: { token: 'asfasf' }, transports: ['websocket'] })
+
+socket.on('connect', () => {
+  console.log('a user connected')
+  // socket.on('disconnect', () => {
+  //   console.log('user disconnected')
+  // })
+})
+
+// setInterval(() => {
+//   socket.emit('update_civilian', 'HELLO FROM FRONTEND')
+// }, 1000)
+
+socket.on('hello', (msg) => {
+  console.log('message', msg)
+})
 </script>
 
 <template>
