@@ -7,9 +7,8 @@ class Auth extends Super {
   }
 
   async refreshAccessToken(refreshToken) {
-    const response = await this.GET({
-      endpoint: `/refresh`,
-      body: { refreshToken }
+    const response = await this.POST({
+      endpoint: `/refresh?oldRefreshToken=${JSON.stringify(refreshToken)}`
     })
     return response.data
   }
@@ -23,10 +22,12 @@ class Auth extends Super {
       async (error) => {
         const originalRequest = error.config
         const status = error.response.data.code
+        const refresh = localStorage.getItem('refreshToken')
 
         if (status === 401 && !originalRequest._retry) {
           originalRequest._retry = true
-          await this.refreshAccessToken()
+
+          await this.refreshAccessToken(refresh)
           return Super.INSTANCE(originalRequest)
         }
         return Promise.reject(error)

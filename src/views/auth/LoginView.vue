@@ -5,8 +5,10 @@ import { useHead } from '@unhead/vue'
 import { authApi } from '@/api/auth.api.js'
 import { useMutation, useQuery, useQueryClient } from 'vue-query'
 import { useAuthStore } from '@/store/auth.store.js'
-import { onBeforeUpdate } from 'vue'
-
+import { useNotificationStore } from '@/store/notification.store.js'
+import { BASE_NOTIFICATION_TYPES } from '@/constants'
+import BaseNotification from '@/components/base/BaseNotification.vue'
+const notificationStore = useNotificationStore()
 const authStore = useAuthStore()
 const {
   isLoading,
@@ -15,22 +17,27 @@ const {
   data: authData
 } = useMutation((credentials) => authApi.login(credentials), {
   onError: (error) => {
-    if (Array.isArray(error.response.data.error)) {
-      error.response.data.error.forEach((el) => {
-        console.log(el.message)
-      })
-    } else {
-      console.log(error.response.data.message)
-    }
+    notificationStore.callNotification({
+      message: error.response.data.message,
+      type: BASE_NOTIFICATION_TYPES.FAILED
+    })
   },
   onSuccess: (data) => {
-    console.log('succesful')
     authStore.setAuthUser(JSON.stringify(data))
-    console.log(authStore.authUser)
+    localStorage.setItem('accessToken', JSON.stringify(data.accessToken))
+    localStorage.setItem('refreshToken', JSON.stringify(data.refreshToken))
 
+    notificationStore.callNotification({
+      message: 'authorization was succesful',
+      type: BASE_NOTIFICATION_TYPES.SUCCESS
+    })
     // router.push({ name: 'profile' })
   }
 })
+
+function testRefresh() {
+  authApi.current()
+}
 
 function getData(values) {
   mutate({
@@ -53,6 +60,8 @@ useHead({
 
 <template>
   <div>
+    <BaseNotification v-if="notificationStore.isVisible" />
+    <button @click="testRefresh()">click</button>
     <p>Login</p>
     <pre v-if="isLoading">loading</pre>
     <StyledBox card-heading="AUTHORIZATION" needHeader="true">

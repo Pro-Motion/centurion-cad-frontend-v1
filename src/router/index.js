@@ -12,7 +12,7 @@ const router = createRouter({
       name: 'Auth',
 
       redirect: 'auth/login',
-      beforeEnter: async () => console.log('hello'),
+
       ...authRouter()
     },
     //
