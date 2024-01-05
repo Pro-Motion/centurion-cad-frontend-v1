@@ -8,9 +8,26 @@ class Auth extends Super {
 
   async refreshAccessToken(refreshToken) {
     const response = await this.POST({
-      endpoint: `/refresh?oldRefreshToken=${JSON.stringify(refreshToken)}`
+      endpoint: `/refresh`,
+      body: { oldRefreshToken: refreshToken }
     })
-    return response.data
+
+    return response
+  }
+  //  endpoint: `/refresh?oldRefreshToken=${JSON.parse(refreshToken)}`
+  accesInterceptor() {
+    Super.INSTANCE.interceptors.request.use(
+      async (config) => {
+        const accessToken = localStorage.getItem('accessToken')
+        config.headers = {
+          Authorization: `Bearer ${JSON.parse(accessToken)}`
+        }
+        return config
+      },
+      (error) => {
+        Promise.reject(error)
+      }
+    )
   }
 
   refreshInterceptor() {
@@ -22,12 +39,12 @@ class Auth extends Super {
       async (error) => {
         const originalRequest = error.config
         const status = error.response.data.code
-        const refresh = localStorage.getItem('refreshToken')
-
-        if (status === 401 && !originalRequest._retry) {
+        const refresh = JSON.parse(localStorage.getItem('refreshToken'))
+        if (status === 403 && !originalRequest._retry) {
           originalRequest._retry = true
-
-          await this.refreshAccessToken(refresh)
+          const data = await this.refreshAccessToken(refresh)
+          localStorage.setItem('accessToken', JSON.stringify(data.accessToken))
+          localStorage.setItem('refreshToken', JSON.stringify(data.refreshToken))
           return Super.INSTANCE(originalRequest)
         }
         return Promise.reject(error)
@@ -35,7 +52,6 @@ class Auth extends Super {
     )
   }
 
-  //
   async login(credentials) {
     const user = await this.POST({ endpoint: '/login', body: credentials })
     return user
@@ -44,9 +60,8 @@ class Auth extends Super {
   async activate(credentials) {
     return this.POST({ endpoint: '/activate', body: credentials })
   }
-  async current() {
-    return this.GET({ endpoint: `/current` })
-    //add queryparams
+  async current(userId) {
+    return this.GET({ endpoint: `/current?id=${userId}` })
   }
   //  async refresh(refreshToken: string) {
   //   const tokens = await this.POST({ endpoint: "/refresh", body: { refreshToken } });

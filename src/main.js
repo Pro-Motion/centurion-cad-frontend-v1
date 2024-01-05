@@ -13,7 +13,8 @@ const app = createApp(App)
 const store = createPinia()
 const head = createHead()
 
+authApi.accesInterceptor()
+authApi.refreshInterceptor()
+
 export default app
 app.use(store).use(router).use(head).use(VueQueryPlugin).mount('#app')
-
-authApi.refreshInterceptor()

@@ -3,7 +3,7 @@ import LoginForm from '@/components/auth/LoginForm.vue'
 import StyledBox from '@/components/styled-library/StyledBox.vue'
 import { useHead } from '@unhead/vue'
 import { authApi } from '@/api/auth.api.js'
-import { useMutation, useQuery, useQueryClient } from 'vue-query'
+import { useMutation } from 'vue-query'
 import { useAuthStore } from '@/store/auth.store.js'
 import { useNotificationStore } from '@/store/notification.store.js'
 import { BASE_NOTIFICATION_TYPES } from '@/constants'
@@ -23,9 +23,10 @@ const {
     })
   },
   onSuccess: (data) => {
-    authStore.setAuthUser(JSON.stringify(data))
+    authStore.setAuthUser(data)
     localStorage.setItem('accessToken', JSON.stringify(data.accessToken))
     localStorage.setItem('refreshToken', JSON.stringify(data.refreshToken))
+    localStorage.setItem('userId', JSON.stringify(data.id))
 
     notificationStore.callNotification({
       message: 'authorization was succesful',
@@ -34,10 +35,6 @@ const {
     // router.push({ name: 'profile' })
   }
 })
-
-function testRefresh() {
-  authApi.current()
-}
 
 function getData(values) {
   mutate({
@@ -61,7 +58,6 @@ useHead({
 <template>
   <div>
     <BaseNotification v-if="notificationStore.isVisible" />
-    <button @click="testRefresh()">click</button>
     <p>Login</p>
     <pre v-if="isLoading">loading</pre>
     <StyledBox card-heading="AUTHORIZATION" needHeader="true">
